@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg
+  width="512"
+  height="512"
+  viewBox="0 0 512 512"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <defs>
+    <!-- Text path perfectly centered in the ring band -->
+    <path
+      id="ringTextPath"
+      d="
+        M256,256
+        m0,-220
+        a220,220 0 1,1 0,440
+        a220,220 0 1,1 0,-440
+      "
+    />
+  </defs>
+
+  <!-- Outer Circle -->
+  <circle
+    cx="256"
+    cy="256"
+    r="248"
+    fill="#ffffff"
+    stroke="#b80000"
+    stroke-width="16"
+  />
+
+  <!-- Inner Ring -->
+  <circle
+    cx="256"
+    cy="256"
+    r="200"
+    fill="none"
+    stroke="#b80000"
+    stroke-width="6"
+  />
+
+  <!-- Circular Text (guaranteed full circle, no gap) -->
+  <text
+    font-size="19"
+    fill="#b80000"
+    font-family="serif"
+    letter-spacing="3.2"
+  >
+    <textPath
+      href="#ringTextPath"
+      startOffset="50%"
+      text-anchor="middle"
+    >
+      HONG-KONG REPUBLIC • HONG-KONG REPUBLIC • HONG-KONG REPUBLIC • HONG-KONG REPUBLIC
+    </textPath>
+  </text>
+
+  <!-- Central Shield -->
+  <path
+    d="
+      M256 138
+      C208 138 166 162 166 204
+      V266
+      C166 328 220 372 256 396
+      C292 372 346 328 346 266
+      V204
+      C346 162 304 138 256 138 Z
+    "
+    fill="#b80000"
+  />
+
+  <!-- Enlarged Harbour Star (visual anchor) -->
+  <g transform="translate(256 240)">
+    <polygon
+      points="0,-36 10,-10 36,0 10,10 0,36 -10,10 -36,0 -10,-10"
+      fill="#ffffff"
+    />
+    <circle r="7" fill="#b80000" />
+  </g>
+</svg>
