@@ -10,29 +10,42 @@ const pageDescription =
   <section>
     <h1>National Symbols</h1>
     <p class="lead">
-      The national symbols of the Hong-Kong Republic represent the Republic’s
-      constitutional order, civic identity, and continuity of public
-      institutions.
+      The national symbols of the Hong-Kong Republic are protected and regulated
+      for official use. Reproduction must preserve proportions, colours, and
+      integrity of the original assets.
     </p>
   </section>
 
   <section class="grid">
     <div class="card">
       <h2>National Flag</h2>
-      <div class="placeholder">
-        <p>Flag asset pending publication.</p>
-      </div>
+
+      <figure class="media">
+        <img
+          src="/HKR/assets/flag.svg"
+          alt="National Flag of the Hong-Kong Republic"
+          loading="eager"
+        />
+      </figure>
+
       <p class="note">
-        Official specifications are issued by the competent authority and shall
-        be used without alteration.
+        The national flag shall be displayed in accordance with official
+        protocol. Alteration, distortion, or unauthorized commercial use is
+        prohibited.
       </p>
     </div>
 
     <div class="card">
       <h2>National Emblem</h2>
-      <div class="placeholder">
-        <p>Emblem asset pending publication.</p>
-      </div>
+
+      <figure class="media emblem">
+        <img
+          src="/HKR/assets/emblem.svg"
+          alt="National Emblem of the Hong-Kong Republic"
+          loading="eager"
+        />
+      </figure>
+
       <p class="note">
         Use of the national emblem is restricted to authorized governmental
         purposes unless otherwise permitted by law.
@@ -45,6 +58,18 @@ const pageDescription =
       <p class="note">
         The motto is used in official publications and state communications.
       </p>
+
+      <div class="divider"></div>
+
+      <h3 class="minor">Download</h3>
+      <ul class="downloads">
+        <li>
+          <a href="/HKR/assets/flag.svg" download>National Flag (SVG)</a>
+        </li>
+        <li>
+          <a href="/HKR/assets/emblem.svg" download>National Emblem (SVG)</a>
+        </li>
+      </ul>
     </div>
   </section>
 </BaseLayout>
@@ -53,7 +78,7 @@ const pageDescription =
   .lead {
     font-size: 1.1rem;
     color: #444;
-    max-width: 820px;
+    max-width: 860px;
   }
 
   section {
@@ -74,35 +99,78 @@ const pageDescription =
 
   .card {
     border: 1px solid #e5e5e5;
-    border-radius: 10px;
+    border-radius: 12px;
     padding: 1.25rem;
     background: #fff;
   }
 
-  .placeholder {
-    border: 1px dashed #cfcfcf;
-    border-radius: 10px;
-    padding: 1.25rem;
+  .media {
     margin: 0.75rem 0 0.75rem 0;
+    border: 1px solid #efefef;
+    border-radius: 12px;
+    padding: 0.75rem;
     background: #fafafa;
-    color: #666;
-    text-align: center;
+  }
+
+  .media img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  .emblem img {
+    max-width: 320px;
+    margin: 0 auto;
   }
 
   .note {
     color: #555;
     font-size: 0.95rem;
+    margin-top: 0.5rem;
   }
 
   .motto {
     font-size: 1.15rem;
     margin: 0.75rem 0;
-    font-weight: 600;
+    font-weight: 650;
+  }
+
+  .divider {
+    height: 1px;
+    background: #e5e5e5;
+    margin: 1.25rem 0;
+  }
+
+  .minor {
+    font-size: 1rem;
+    margin: 0 0 0.5rem 0;
+    color: #222;
+  }
+
+  .downloads {
+    padding-left: 1.1rem;
+    margin: 0.25rem 0 0 0;
+  }
+
+  .downloads li {
+    margin-bottom: 0.35rem;
+  }
+
+  .downloads a {
+    color: #b80000;
+    text-decoration: none;
+  }
+
+  .downloads a:hover {
+    text-decoration: underline;
   }
 
   @media (max-width: 900px) {
     .grid {
       grid-template-columns: 1fr;
+    }
+    .emblem img {
+      max-width: 280px;
     }
   }
 </style>
