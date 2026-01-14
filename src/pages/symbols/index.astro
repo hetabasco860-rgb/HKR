@@ -1,0 +1,108 @@
+---
+import BaseLayout from "@layouts/BaseLayout.astro";
+
+const pageTitle = "National Symbols | Hong-Kong Republic";
+const pageDescription =
+  "Official national symbols of the Hong-Kong Republic, including the national flag, emblem, and motto.";
+---
+
+<BaseLayout title={pageTitle} description={pageDescription}>
+  <section>
+    <h1>National Symbols</h1>
+    <p class="lead">
+      The national symbols of the Hong-Kong Republic represent the Republic’s
+      constitutional order, civic identity, and continuity of public
+      institutions.
+    </p>
+  </section>
+
+  <section class="grid">
+    <div class="card">
+      <h2>National Flag</h2>
+      <div class="placeholder">
+        <p>Flag asset pending publication.</p>
+      </div>
+      <p class="note">
+        Official specifications are issued by the competent authority and shall
+        be used without alteration.
+      </p>
+    </div>
+
+    <div class="card">
+      <h2>National Emblem</h2>
+      <div class="placeholder">
+        <p>Emblem asset pending publication.</p>
+      </div>
+      <p class="note">
+        Use of the national emblem is restricted to authorized governmental
+        purposes unless otherwise permitted by law.
+      </p>
+    </div>
+
+    <div class="card">
+      <h2>National Motto</h2>
+      <p class="motto">“From the Harbour, We Govern Ourselves.”</p>
+      <p class="note">
+        The motto is used in official publications and state communications.
+      </p>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .lead {
+    font-size: 1.1rem;
+    color: #444;
+    max-width: 820px;
+  }
+
+  section {
+    margin-top: 2.75rem;
+  }
+
+  h1 {
+    font-size: 2.2rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.25rem;
+    margin-top: 2.5rem;
+  }
+
+  .card {
+    border: 1px solid #e5e5e5;
+    border-radius: 10px;
+    padding: 1.25rem;
+    background: #fff;
+  }
+
+  .placeholder {
+    border: 1px dashed #cfcfcf;
+    border-radius: 10px;
+    padding: 1.25rem;
+    margin: 0.75rem 0 0.75rem 0;
+    background: #fafafa;
+    color: #666;
+    text-align: center;
+  }
+
+  .note {
+    color: #555;
+    font-size: 0.95rem;
+  }
+
+  .motto {
+    font-size: 1.15rem;
+    margin: 0.75rem 0;
+    font-weight: 600;
+  }
+
+  @media (max-width: 900px) {
+    .grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
