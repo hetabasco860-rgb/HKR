@@ -1,176 +1,231 @@
 ---
 import BaseLayout from "@layouts/BaseLayout.astro";
 
-const pageTitle = "National Symbols | Hong-Kong Republic";
+const pageTitle = "國家象徵｜香港共和國";
 const pageDescription =
-  "Official national symbols of the Hong-Kong Republic, including the national flag, emblem, and motto.";
+  "香港共和國國家象徵：國旗、國徽與國家格言之官方展示與使用說明。";
 ---
 
 <BaseLayout title={pageTitle} description={pageDescription}>
-  <section>
-    <h1>National Symbols</h1>
+  <section class="head">
+    <div class="badge">國家象徵</div>
+    <h1>國家象徵</h1>
     <p class="lead">
-      The national symbols of the Hong-Kong Republic are protected and regulated
-      for official use. Reproduction must preserve proportions, colours, and
-      integrity of the original assets.
+      本頁展示香港共和國之國家象徵，並列明其官方用途與使用規範。所有再製、展示與引用，
+      均須符合相關法律與官方技術規格。
     </p>
   </section>
 
-  <section class="grid">
-    <div class="card">
-      <h2>National Flag</h2>
+  <section class="symbols">
+    <div class="symbol-card">
+      <div class="symbol-head">
+        <h2>國旗</h2>
+        <div class="symbol-meta">官方版本（SVG）</div>
+      </div>
 
-      <figure class="media">
+      <div class="media flag">
         <img
           src="/HKR/assets/flag.svg"
-          alt="National Flag of the Hong-Kong Republic"
+          alt="香港共和國國旗"
           loading="eager"
         />
-      </figure>
+      </div>
 
-      <p class="note">
-        The national flag shall be displayed in accordance with official
-        protocol. Alteration, distortion, or unauthorized commercial use is
-        prohibited.
-      </p>
+      <div class="desc">
+        國旗為國家之主要視覺象徵，適用於政府建築、官方網站、外交場合與依法規定之公共用途。
+      </div>
+
+      <div class="downloads">
+        <a href="/HKR/assets/flag.svg" download class="file">
+          <span class="fname">國旗（SVG）</span>
+          <span class="ftype">向量格式</span>
+        </a>
+      </div>
     </div>
 
-    <div class="card">
-      <h2>National Emblem</h2>
+    <div class="symbol-card">
+      <div class="symbol-head">
+        <h2>國徽</h2>
+        <div class="symbol-meta">官方版本（SVG）</div>
+      </div>
 
-      <figure class="media emblem">
+      <div class="media emblem">
         <img
           src="/HKR/assets/emblem.svg"
-          alt="National Emblem of the Hong-Kong Republic"
+          alt="香港共和國國徽"
           loading="eager"
         />
-      </figure>
+      </div>
 
-      <p class="note">
-        Use of the national emblem is restricted to authorized governmental
-        purposes unless otherwise permitted by law.
-      </p>
+      <div class="desc">
+        國徽用於政府文件、公報、法律文本、官方網站頁首與頁尾，以及依法授權之正式用途。
+      </div>
+
+      <div class="downloads">
+        <a href="/HKR/assets/emblem.svg" download class="file">
+          <span class="fname">國徽（SVG）</span>
+          <span class="ftype">向量格式</span>
+        </a>
+      </div>
     </div>
 
-    <div class="card">
-      <h2>National Motto</h2>
-      <p class="motto">“From the Harbour, We Govern Ourselves.”</p>
-      <p class="note">
-        The motto is used in official publications and state communications.
-      </p>
+    <div class="symbol-card">
+      <div class="symbol-head">
+        <h2>國家格言</h2>
+        <div class="symbol-meta">官方文本</div>
+      </div>
 
-      <div class="divider"></div>
+      <blockquote class="motto">
+        From the Harbour, We Govern Ourselves.
+      </blockquote>
 
-      <h3 class="minor">Download</h3>
-      <ul class="downloads">
-        <li>
-          <a href="/HKR/assets/flag.svg" download>National Flag (SVG)</a>
-        </li>
-        <li>
-          <a href="/HKR/assets/emblem.svg" download>National Emblem (SVG)</a>
-        </li>
-      </ul>
+      <div class="desc">
+        國家格言用於官方出版物、外交文件與國家象徵展示中，以表述共和國之治理原則與歷史來源。
+      </div>
     </div>
   </section>
+
+  <section class="note">
+    <strong>使用提示：</strong>
+    未經授權，不得擅自修改、變形、重新配色或將國家象徵用於誤導性或商業性用途。
+    詳細規範以正式法律與公告為準。
+  </section>
+
+  <style>
+    .head {
+      padding-top: 0.25rem;
+    }
+
+    .badge {
+      display: inline-block;
+      font-size: 0.85rem;
+      letter-spacing: 0.8px;
+      color: #fff;
+      background: #b80000;
+      padding: 0.25rem 0.55rem;
+      border-radius: 999px;
+      margin-bottom: 0.75rem;
+    }
+
+    .lead {
+      color: #444;
+      font-size: 1.05rem;
+      max-width: 60rem;
+    }
+
+    .symbols {
+      margin-top: 1.8rem;
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1rem;
+    }
+
+    .symbol-card {
+      border: 1px solid #e7e7e7;
+      border-radius: 18px;
+      background: #fff;
+      padding: 1rem;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .symbol-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 1rem;
+      margin-bottom: 0.6rem;
+    }
+
+    .symbol-meta {
+      font-size: 0.9rem;
+      color: #666;
+      white-space: nowrap;
+    }
+
+    .media {
+      border: 1px solid #e7e7e7;
+      border-radius: 14px;
+      background: #fafafa;
+      padding: 0.8rem;
+      margin-bottom: 0.6rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 160px;
+    }
+
+    .media.flag img {
+      width: 100%;
+      height: auto;
+    }
+
+    .media.emblem img {
+      max-width: 260px;
+      width: 100%;
+      height: auto;
+    }
+
+    .desc {
+      color: #444;
+      font-size: 0.98rem;
+      margin-bottom: 0.6rem;
+    }
+
+    .downloads {
+      margin-top: auto;
+      border-top: 1px solid #eeeeee;
+      padding-top: 0.6rem;
+    }
+
+    .file {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      text-decoration: none;
+      border: 1px solid #e7e7e7;
+      border-radius: 12px;
+      padding: 0.6rem 0.8rem;
+      background: #fafafa;
+      color: #111;
+    }
+
+    .file:hover {
+      border-color: #b80000;
+      background: #fff;
+    }
+
+    .fname {
+      font-weight: 850;
+    }
+
+    .ftype {
+      font-size: 0.88rem;
+      color: #666;
+    }
+
+    .motto {
+      margin: 0.8rem 0 0.6rem;
+      padding: 0.9rem 1rem;
+      border-left: 4px solid #b80000;
+      background: #fafafa;
+      font-weight: 800;
+      font-size: 1.05rem;
+    }
+
+    .note {
+      margin-top: 1.8rem;
+      border: 1px solid #e7e7e7;
+      border-radius: 16px;
+      background: #fafafa;
+      padding: 1rem;
+      color: #444;
+    }
+
+    @media (max-width: 980px) {
+      .symbols {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
 </BaseLayout>
-
-<style>
-  .lead {
-    font-size: 1.1rem;
-    color: #444;
-    max-width: 860px;
-  }
-
-  section {
-    margin-top: 2.75rem;
-  }
-
-  h1 {
-    font-size: 2.2rem;
-    margin-bottom: 0.75rem;
-  }
-
-  .grid {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 1.25rem;
-    margin-top: 2.5rem;
-  }
-
-  .card {
-    border: 1px solid #e5e5e5;
-    border-radius: 12px;
-    padding: 1.25rem;
-    background: #fff;
-  }
-
-  .media {
-    margin: 0.75rem 0 0.75rem 0;
-    border: 1px solid #efefef;
-    border-radius: 12px;
-    padding: 0.75rem;
-    background: #fafafa;
-  }
-
-  .media img {
-    display: block;
-    width: 100%;
-    height: auto;
-  }
-
-  .emblem img {
-    max-width: 320px;
-    margin: 0 auto;
-  }
-
-  .note {
-    color: #555;
-    font-size: 0.95rem;
-    margin-top: 0.5rem;
-  }
-
-  .motto {
-    font-size: 1.15rem;
-    margin: 0.75rem 0;
-    font-weight: 650;
-  }
-
-  .divider {
-    height: 1px;
-    background: #e5e5e5;
-    margin: 1.25rem 0;
-  }
-
-  .minor {
-    font-size: 1rem;
-    margin: 0 0 0.5rem 0;
-    color: #222;
-  }
-
-  .downloads {
-    padding-left: 1.1rem;
-    margin: 0.25rem 0 0 0;
-  }
-
-  .downloads li {
-    margin-bottom: 0.35rem;
-  }
-
-  .downloads a {
-    color: #b80000;
-    text-decoration: none;
-  }
-
-  .downloads a:hover {
-    text-decoration: underline;
-  }
-
-  @media (max-width: 900px) {
-    .grid {
-      grid-template-columns: 1fr;
-    }
-    .emblem img {
-      max-width: 280px;
-    }
-  }
-</style>
