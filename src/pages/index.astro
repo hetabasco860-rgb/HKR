@@ -1,0 +1,112 @@
+---
+import BaseLayout from "@layouts/BaseLayout.astro";
+
+const pageTitle = "Hong-Kong Republic";
+const pageDescription =
+  "Official website of the Government of the Hong-Kong Republic";
+---
+
+<BaseLayout title={pageTitle} description={pageDescription}>
+  <section class="hero">
+    <h1>Hong-Kong Republic</h1>
+    <p class="subtitle">
+      An open, lawful, and self-governing republic founded in the harbour city
+      of Hong Kong.
+    </p>
+  </section>
+
+  <section class="overview">
+    <h2>National Overview</h2>
+    <p>
+      The Hong-Kong Republic is a constitutional republic exercising full
+      self-governance over its territory, institutions, and external affairs.
+      It operates under the principles of the rule of law, institutional
+      accountability, and individual liberty.
+    </p>
+  </section>
+
+  <section class="quick-links">
+    <h2>Government Information</h2>
+    <ul>
+      <li>
+        <a href="/HKR/government">
+          Structure of Government and Public Institutions
+        </a>
+      </li>
+      <li>
+        <a href="/HKR/laws">
+          Constitutional Framework and Core Laws
+        </a>
+      </li>
+      <li>
+        <a href="/HKR/timeline">
+          National Timeline and Historical Record
+        </a>
+      </li>
+      <li>
+        <a href="/HKR/press">
+          Official Statements and Press Releases
+        </a>
+      </li>
+    </ul>
+  </section>
+
+  <section class="notice">
+    <h2>Official Notice</h2>
+    <p>
+      All information published on this website constitutes official public
+      communications of the Government of the Hong-Kong Republic.
+    </p>
+  </section>
+</BaseLayout>
+
+<style>
+  .hero {
+    margin-bottom: 3rem;
+  }
+
+  h1 {
+    font-size: 2.6rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .subtitle {
+    font-size: 1.15rem;
+    color: #555;
+    max-width: 720px;
+  }
+
+  section {
+    margin-top: 3rem;
+  }
+
+  h2 {
+    font-size: 1.4rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .quick-links ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .quick-links li {
+    margin-bottom: 0.5rem;
+  }
+
+  .quick-links a {
+    text-decoration: none;
+    color: #b80000;
+  }
+
+  .quick-links a:hover {
+    text-decoration: underline;
+  }
+
+  .notice {
+    border-top: 1px solid #e5e5e5;
+    padding-top: 1.5rem;
+    font-size: 0.95rem;
+    color: #444;
+  }
+</style>
