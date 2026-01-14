@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg
+  width="1200"
+  height="800"
+  viewBox="0 0 3 2"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <!-- Background -->
+  <rect width="3" height="2" fill="#b80000" />
+
+  <!-- Central Emblem (Stylized Harbour Star) -->
+  <g transform="translate(1.5 1)">
+    <polygon
+      points="0,-0.55 0.16,-0.16 0.55,0 0.16,0.16 0,0.55 -0.16,0.16 -0.55,0 -0.16,-0.16"
+      fill="#ffffff"
+    />
+    <circle r="0.12" fill="#b80000" />
+  </g>
+</svg>
