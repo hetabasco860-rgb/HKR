@@ -1,117 +1,285 @@
 ---
 import BaseLayout from "@layouts/BaseLayout.astro";
 
-const pageTitle = "National Timeline | Hong-Kong Republic";
+const pageTitle = "國史年表｜香港共和國";
 const pageDescription =
-  "Major national events and official historical record of the Hong-Kong Republic.";
+  "香港共和國國史年表：重大事件與官方紀錄（按日期排列）。";
 ---
 
 <BaseLayout title={pageTitle} description={pageDescription}>
-  <section>
-    <h1>National Timeline</h1>
+  <section class="head">
+    <div class="badge">國史檔案</div>
+    <h1>國史年表</h1>
     <p class="lead">
-      The timeline below records major national events as published through
-      official channels. Dates are provided in the Gregorian calendar.
+      本頁列示香港共和國重大事件之官方紀錄（概述）。日期以公曆表示；如有版本差異，
+      以政府正式登載之文件與公報版本為準。
     </p>
   </section>
 
-  <section class="timeline">
-    <h2>Key Milestones</h2>
+  <section class="archive">
+    <div class="archive-head">
+      <h2>主要里程碑</h2>
+      <div class="meta">更新：按需增補</div>
+    </div>
 
-    <div class="event">
-      <div class="date">1 July 2043</div>
-      <div class="content">
-        <h3>Commencement of the Republic</h3>
-        <p>
-          Constitutional governance commenced; public institutions assumed full
-          operational responsibility.
-        </p>
+    <div class="timeline" role="list">
+      <div class="entry" role="listitem">
+        <div class="date">
+          <div class="ymd">2043-07-01</div>
+          <div class="label">制度運作</div>
+        </div>
+
+        <div class="body">
+          <h3>共和國制度開始運作</h3>
+          <p>
+            憲政治理開始運作；公共機構依法履行職權，確保公共服務、司法程序與行政運作之連續性。
+          </p>
+          <div class="tags">
+            <span class="tag">憲政</span>
+            <span class="tag">公共服務</span>
+            <span class="tag">機關運作</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="entry" role="listitem">
+        <div class="date">
+          <div class="ymd">2043-07-15</div>
+          <div class="label">金融與市場</div>
+        </div>
+
+        <div class="body">
+          <h3>金融連續性安排正式確認</h3>
+          <p>
+            市場結算、合約連續性及金融系統運作安排獲正式確認，並向市場及公共機構發布實施指引。
+          </p>
+          <div class="tags">
+            <span class="tag">金融穩定</span>
+            <span class="tag">結算</span>
+            <span class="tag">市場秩序</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="entry" role="listitem">
+        <div class="date">
+          <div class="ymd">2043-08-03</div>
+          <div class="label">司法</div>
+        </div>
+
+        <div class="body">
+          <h3>法院行政與司法制度安排</h3>
+          <p>
+            司法行政架構與法院運作安排完成調整，並重申司法獨立與正當程序保障，確保審判秩序與
+            法律救濟可及性。
+          </p>
+          <div class="tags">
+            <span class="tag">司法獨立</span>
+            <span class="tag">程序正義</span>
+            <span class="tag">法院行政</span>
+          </div>
+        </div>
       </div>
     </div>
 
-    <div class="event">
-      <div class="date">15 July 2043</div>
-      <div class="content">
-        <h3>Continuity of Financial Settlement</h3>
-        <p>
-          Formal continuity arrangements for market operations and settlement
-          infrastructure were confirmed.
-        </p>
-      </div>
-    </div>
-
-    <div class="event">
-      <div class="date">3 August 2043</div>
-      <div class="content">
-        <h3>Judicial Administration Reconstitution</h3>
-        <p>
-          Court administration and judicial independence protections entered
-          effect under the national framework.
-        </p>
-      </div>
+    <div class="note">
+      提示：下一步可將年表事件拆分為可引用之檔案條目（具永久連結與引用格式），並接入公告或公報之對應文件。
     </div>
   </section>
-</BaseLayout>
 
-<style>
-  .lead {
-    font-size: 1.1rem;
-    color: #444;
-    max-width: 820px;
-  }
+  <section class="links">
+    <a class="link" href="/HKR/press">
+      <span class="l-title">前往公告中心</span>
+      <span class="l-desc">查閱政策發布、聲明與新聞稿</span>
+    </a>
+    <a class="link" href="/HKR/laws">
+      <span class="l-title">查閱法律入口</span>
+      <span class="l-desc">憲政框架與核心法規概述</span>
+    </a>
+    <a class="link" href="/HKR/government">
+      <span class="l-title">政府架構</span>
+      <span class="l-desc">憲制機關與公共機構</span>
+    </a>
+  </section>
 
-  section {
-    margin-top: 2.75rem;
-  }
-
-  h1 {
-    font-size: 2.2rem;
-    margin-bottom: 0.75rem;
-  }
-
-  h2 {
-    font-size: 1.35rem;
-    margin-bottom: 1rem;
-  }
-
-  .timeline {
-    margin-top: 2.5rem;
-  }
-
-  .event {
-    display: grid;
-    grid-template-columns: 170px 1fr;
-    gap: 1.25rem;
-    padding: 1.25rem 0;
-    border-bottom: 1px solid #e5e5e5;
-  }
-
-  .event:last-child {
-    border-bottom: none;
-  }
-
-  .date {
-    font-size: 0.95rem;
-    color: #777;
-    white-space: nowrap;
-  }
-
-  .content h3 {
-    margin: 0;
-    font-size: 1.05rem;
-  }
-
-  .content p {
-    margin: 0.35rem 0 0;
-    color: #444;
-  }
-
-  @media (max-width: 700px) {
-    .event {
-      grid-template-columns: 1fr;
+  <style>
+    .head {
+      padding-top: 0.25rem;
     }
-    .date {
+
+    .badge {
+      display: inline-block;
+      font-size: 0.85rem;
+      letter-spacing: 0.8px;
+      color: #fff;
+      background: #b80000;
+      padding: 0.25rem 0.55rem;
+      border-radius: 999px;
+      margin-bottom: 0.75rem;
+    }
+
+    .lead {
+      color: #444;
+      font-size: 1.05rem;
+      max-width: 60rem;
+    }
+
+    .archive {
+      margin-top: 1.8rem;
+      border: 1px solid #e7e7e7;
+      border-radius: 18px;
+      overflow: hidden;
+      background: #fff;
+    }
+
+    .archive-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 1rem;
+      padding: 1rem 1rem 0.85rem;
+      background: #fafafa;
+      border-bottom: 1px solid #eeeeee;
+      flex-wrap: wrap;
+    }
+
+    .archive-head h2 {
+      margin: 0;
+      font-size: 1.25rem;
+    }
+
+    .meta {
       color: #666;
+      font-size: 0.92rem;
+      white-space: nowrap;
     }
-  }
-</style>
+
+    .timeline {
+      padding: 0.2rem 0;
+    }
+
+    .entry {
+      display: grid;
+      grid-template-columns: 170px 1fr;
+      gap: 1rem;
+      padding: 1rem;
+      border-bottom: 1px solid #eeeeee;
+      position: relative;
+    }
+
+    .entry:last-child {
+      border-bottom: none;
+    }
+
+    .date {
+      border-right: 2px solid #f0f0f0;
+      padding-right: 1rem;
+    }
+
+    .ymd {
+      font-weight: 900;
+      color: #111;
+      font-size: 0.98rem;
+      letter-spacing: 0.2px;
+    }
+
+    .label {
+      margin-top: 0.35rem;
+      display: inline-flex;
+      width: fit-content;
+      padding: 0.18rem 0.55rem;
+      border-radius: 999px;
+      border: 1px solid #e7e7e7;
+      background: #fafafa;
+      color: #333;
+      font-weight: 800;
+      font-size: 0.85rem;
+    }
+
+    .body h3 {
+      margin: 0;
+      font-size: 1.08rem;
+      letter-spacing: 0.2px;
+    }
+
+    .body p {
+      margin: 0.35rem 0 0;
+      color: #444;
+    }
+
+    .tags {
+      margin-top: 0.7rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.45rem;
+    }
+
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      padding: 0.16rem 0.5rem;
+      border-radius: 999px;
+      border: 1px solid #e7e7e7;
+      background: #fff;
+      color: #333;
+      font-weight: 750;
+      font-size: 0.84rem;
+    }
+
+    .note {
+      padding: 0.9rem 1rem;
+      color: #666;
+      background: #fafafa;
+      border-top: 1px solid #eeeeee;
+      font-size: 0.92rem;
+    }
+
+    .links {
+      margin-top: 1.5rem;
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1rem;
+    }
+
+    .link {
+      display: block;
+      border: 1px solid #e7e7e7;
+      border-radius: 16px;
+      background: #fafafa;
+      padding: 1rem;
+      text-decoration: none;
+      color: #111;
+    }
+
+    .link:hover {
+      border-color: #b80000;
+      background: #fff;
+      box-shadow: 0 10px 26px rgba(0, 0, 0, 0.06);
+    }
+
+    .l-title {
+      display: block;
+      font-weight: 900;
+      margin-bottom: 0.25rem;
+    }
+
+    .l-desc {
+      display: block;
+      color: #555;
+      font-size: 0.95rem;
+    }
+
+    @media (max-width: 980px) {
+      .entry {
+        grid-template-columns: 1fr;
+      }
+      .date {
+        border-right: none;
+        padding-right: 0;
+      }
+      .links {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</BaseLayout>
