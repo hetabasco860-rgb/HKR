@@ -1,0 +1,202 @@
+---
+import BaseLayout from "@layouts/BaseLayout.astro";
+
+const pageTitle = "PR-2043-0715｜金融連續性與市場運作安排通告｜公告中心";
+const pageDescription =
+  "公告編號 PR-2043-0715：金融連續性與市場運作安排通告。";
+---
+
+<BaseLayout title={pageTitle} description={pageDescription}>
+  <section class="head">
+    <div class="crumbs">
+      <a href="/HKR/press">公告中心</a>
+      <span class="sep">/</span>
+      <span>PR-2043-0715</span>
+    </div>
+
+    <div class="badge">政策通告</div>
+    <h1>金融連續性與市場運作安排通告</h1>
+
+    <div class="meta">
+      <div class="m">
+        <div class="k">公告編號</div>
+        <div class="v">PR-2043-0715</div>
+      </div>
+      <div class="m">
+        <div class="k">發布日期</div>
+        <div class="v"><time datetime="2043-07-15">2043-07-15</time></div>
+      </div>
+      <div class="m">
+        <div class="k">發布機關</div>
+        <div class="v">金融安全局</div>
+      </div>
+      <div class="m">
+        <div class="k">狀態</div>
+        <div class="v"><span class="pill">已發布</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="content">
+    <h2>一、目的</h2>
+    <p>
+      本通告就金融系統連續性、市場運作與結算安排作出公開說明，供市場參與者、公共機構及市民查閱。
+    </p>
+
+    <h2>二、適用範圍</h2>
+    <ul>
+      <li>金融市場交易、結算與清算相關基礎設施</li>
+      <li>受監管金融機構之營運連續性安排</li>
+      <li>政府及公共機構涉及之支付、登記與合約履行程序</li>
+    </ul>
+
+    <h2>三、主要安排</h2>
+    <ol>
+      <li>確認市場結算與清算機制之連續運作。</li>
+      <li>確認合約、債務與既有法律關係之履行安排遵從既定程序與適用法規。</li>
+      <li>就市場資訊披露、風險通報與監管協調設置統一渠道。</li>
+    </ol>
+
+    <h2>四、實施與聯絡</h2>
+    <p>
+      本通告之具體實施細節由金融安全局按需要發布補充指引。市場參與者應依照適用規範進行合規申報與作業。
+    </p>
+
+    <div class="box">
+      <div class="box-title">引用格式</div>
+      <p class="small">
+        香港共和國政府（金融安全局），《金融連續性與市場運作安排通告》，公告編號 PR-2043-0715，2043-07-15。
+      </p>
+    </div>
+
+    <!-- ✅ 這裡是我必須加的「避免誤導」標示（可移到 About/頁腳，但不能完全拿掉） -->
+    <div class="disclosure">
+      本站內容為架空世界觀／創作用途之示例文本，用於網站設計與敘事呈現。
+    </div>
+  </section>
+
+  <style>
+    .crumbs {
+      font-size: 0.92rem;
+      color: #666;
+      display: flex;
+      align-items: center;
+      gap: 0.55rem;
+      margin-bottom: 0.65rem;
+      flex-wrap: wrap;
+    }
+    .crumbs a {
+      color: #b80000;
+      text-decoration: none;
+      font-weight: 850;
+    }
+    .crumbs a:hover {
+      text-decoration: underline;
+    }
+    .sep {
+      color: #aaa;
+    }
+
+    .badge {
+      display: inline-block;
+      font-size: 0.85rem;
+      letter-spacing: 0.8px;
+      color: #fff;
+      background: #b80000;
+      padding: 0.25rem 0.55rem;
+      border-radius: 999px;
+      margin-bottom: 0.75rem;
+    }
+
+    .meta {
+      margin-top: 1rem;
+      border: 1px solid #e7e7e7;
+      border-radius: 18px;
+      background: #fafafa;
+      padding: 0.9rem;
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 0.75rem;
+    }
+
+    .m {
+      border: 1px solid #eeeeee;
+      background: #fff;
+      border-radius: 14px;
+      padding: 0.75rem;
+    }
+
+    .k {
+      color: #666;
+      font-size: 0.85rem;
+      margin-bottom: 0.25rem;
+    }
+
+    .v {
+      font-weight: 950;
+      color: #111;
+    }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.18rem 0.55rem;
+      border-radius: 999px;
+      border: 1px solid #e7e7e7;
+      background: #fafafa;
+      font-weight: 950;
+      font-size: 0.86rem;
+      white-space: nowrap;
+    }
+
+    .content {
+      margin-top: 1.6rem;
+      border: 1px solid #e7e7e7;
+      border-radius: 18px;
+      background: #fff;
+      padding: 1.1rem;
+    }
+
+    .content h2 {
+      margin-top: 1.5rem;
+    }
+    .content h2:first-child {
+      margin-top: 0;
+    }
+
+    .box {
+      margin-top: 1.2rem;
+      border: 1px solid #e7e7e7;
+      border-radius: 16px;
+      background: #fafafa;
+      padding: 0.95rem;
+    }
+
+    .box-title {
+      font-weight: 950;
+      margin-bottom: 0.35rem;
+    }
+
+    .small {
+      color: #555;
+      margin: 0;
+    }
+
+    .disclosure {
+      margin-top: 1.1rem;
+      border-left: 4px solid #111;
+      background: #f7f7f7;
+      padding: 0.85rem 1rem;
+      border-radius: 12px;
+      color: #555;
+      font-size: 0.95rem;
+    }
+
+    @media (max-width: 980px) {
+      .meta {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</BaseLayout>
