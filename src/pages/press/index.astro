@@ -1,97 +1,213 @@
 ---
 import BaseLayout from "@layouts/BaseLayout.astro";
 
-const pageTitle = "公告中心｜香港共和國";
-const pageDescription =
-  "香港共和國政府公告中心：政策通告、新聞稿與官方聲明（按日期與公告編號排列）。";
+const pageTitle = "香港共和國政府官方網站";
+const pageDescription = "香港共和國政府官方門戶：公告、政府資訊、法律與年表。";
 ---
 
 <BaseLayout title={pageTitle} description={pageDescription}>
-  <section class="head">
-    <div class="badge">公告中心</div>
-    <h1>公告中心</h1>
-    <p class="lead">
-      本頁收錄政府部門與公共機構之官方發布（示例）。公告按日期排序（最新在前），並以公告編號作可追溯識別。
-      如出現版本差異，以正式登載版本為準。
-    </p>
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-left">
+      <div class="kicker">政府官方門戶</div>
+      <h1>香港共和國</h1>
+      <p class="subtitle">
+        提供官方公告、公共資訊、制度架構與法規文件之查閱入口。
+      </p>
+
+      <div class="cta-row">
+        <a class="btn primary" href="/HKR/press">查看最新公告</a>
+        <a class="btn ghost" href="/HKR/government">政府架構</a>
+      </div>
+
+      <div class="meta">
+        <div class="meta-item">
+          <div class="meta-label">主要語言</div>
+          <div class="meta-value">繁體中文（香港）</div>
+        </div>
+        <div class="meta-item">
+          <div class="meta-label">資訊性質</div>
+          <div class="meta-value">官方公開發布</div>
+        </div>
+        <div class="meta-item">
+          <div class="meta-label">更新機制</div>
+          <div class="meta-value">按需發布</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-right">
+      <div class="panel">
+        <div class="panel-head">
+          <div class="panel-title">快速入口</div>
+          <div class="panel-sub">常用查閱與公共資訊</div>
+        </div>
+
+        <div class="grid">
+          <a class="tile" href="/HKR/press">
+            <div class="tile-title">公告</div>
+            <div class="tile-desc">政策發布、新聞稿與官方聲明</div>
+          </a>
+          <a class="tile" href="/HKR/laws">
+            <div class="tile-title">法律</div>
+            <div class="tile-desc">憲政框架、核心法規與登記</div>
+          </a>
+          <a class="tile" href="/HKR/government">
+            <div class="tile-title">政府</div>
+            <div class="tile-desc">制度、機關與公共機構</div>
+          </a>
+          <a class="tile" href="/HKR/timeline">
+            <div class="tile-title">年表</div>
+            <div class="tile-desc">重大事件與官方紀錄</div>
+          </a>
+          <a class="tile" href="/HKR/symbols">
+            <div class="tile-title">國家象徵</div>
+            <div class="tile-desc">國旗、國徽與格言</div>
+          </a>
+          <a class="tile" href="/HKR/404">
+            <div class="tile-title">聯絡與協助</div>
+            <div class="tile-desc">（將於後續建立）</div>
+          </a>
+        </div>
+      </div>
+    </div>
   </section>
 
+  <!-- Notice Bar -->
   <section class="notice">
     <div class="notice-badge">官方提示</div>
     <div class="notice-text">
-      未經授權不得擅自更改、剪裁或曲解公告內容。引用時應保留公告編號、發布日期與發布機關。
+      本網站所載內容屬官方公開發布資訊。未經授權不得擅自更改、剪裁或曲解。
     </div>
   </section>
 
-  <section class="board">
-    <div class="board-head">
-      <h2>最新發布</h2>
-      <div class="meta">共 3 則（示例）</div>
-    </div>
-
-    <div class="table">
-      <div class="row headrow">
-        <div class="c1">日期</div>
-        <div class="c2">編號 / 類別</div>
-        <div class="c3">標題</div>
-        <div class="c4">發布機關</div>
-        <div class="c5">狀態</div>
+  <!-- Latest / Public -->
+  <section class="two-col">
+    <div class="col">
+      <div class="section-head">
+        <h2>最新發布</h2>
+        <a class="headlink" href="/HKR/press">全部公告 →</a>
       </div>
 
-      <!-- PR-2043-0715 -->
-      <a class="row item" href="/HKR/press/pr-2043-0715">
-        <div class="c1"><time datetime="2043-07-15">2043-07-15</time></div>
-        <div class="c2">
-          <span class="code">PR-2043-0715</span>
-          <span class="kind">政策通告</span>
+      <div class="bulletin">
+        <div class="b-row b-head">
+          <div class="c1">日期</div>
+          <div class="c2">編號 / 類別</div>
+          <div class="c3">標題</div>
+          <div class="c4">發布機關</div>
+          <div class="c5">狀態</div>
         </div>
-        <div class="c3">
-          金融連續性與市場運作安排通告
-          <div class="excerpt">市場結算、合約連續性與金融系統運作安排之公告與實施指引。</div>
-        </div>
-        <div class="c4">金融安全局</div>
-        <div class="c5"><span class="status ok">已發布</span></div>
-      </a>
 
-      <!-- PR-2043-0803 -->
-      <a class="row item" href="/HKR/press/pr-2043-0803">
-        <div class="c1"><time datetime="2043-08-03">2043-08-03</time></div>
-        <div class="c2">
-          <span class="code">PR-2043-0803</span>
-          <span class="kind">新聞稿</span>
-        </div>
-        <div class="c3">
-          司法行政架構調整與法院運作安排
-          <div class="excerpt">法院行政與程序安排更新，並重申司法獨立與正當程序保障。</div>
-        </div>
-        <div class="c4">司法行政署</div>
-        <div class="c5"><span class="status ok">已發布</span></div>
-      </a>
+        <!-- ✅ 連到單篇：PR-2043-0715 -->
+        <a class="b-row b-item" href="/HKR/press/pr-2043-0715">
+          <div class="c1">
+            <time datetime="2043-07-15">2043-07-15</time>
+          </div>
+          <div class="c2">
+            <span class="code">PR-2043-0715</span>
+            <span class="kind">政策通告</span>
+          </div>
+          <div class="c3">
+            金融連續性與市場運作安排通告
+          </div>
+          <div class="c4">金融安全局</div>
+          <div class="c5"><span class="status ok">已發布</span></div>
+        </a>
 
-      <!-- ✅ ST-2043-0701：本步驟重點 -->
-      <a class="row item" href="/HKR/press/st-2043-0701">
-        <div class="c1"><time datetime="2043-07-01">2043-07-01</time></div>
-        <div class="c2">
-          <span class="code">ST-2043-0701</span>
-          <span class="kind">官方聲明</span>
-        </div>
-        <div class="c3">
-          關於共和國制度運作之正式聲明
-          <div class="excerpt">宣布憲政治理開始運作，公共機構依法履行職權，確保公共服務連續性。</div>
-        </div>
-        <div class="c4">行政總理辦公室</div>
-        <div class="c5"><span class="status ok">已發布</span></div>
-      </a>
+        <!-- ✅ 連到單篇：ST-2043-0701 -->
+        <a class="b-row b-item" href="/HKR/press/st-2043-0701">
+          <div class="c1">
+            <time datetime="2043-07-01">2043-07-01</time>
+          </div>
+          <div class="c2">
+            <span class="code">ST-2043-0701</span>
+            <span class="kind">官方聲明</span>
+          </div>
+          <div class="c3">
+            關於共和國制度運作之正式聲明
+          </div>
+          <div class="c4">行政總理辦公室</div>
+          <div class="c5"><span class="status ok">已發布</span></div>
+        </a>
+
+        <!-- ✅ 連到單篇：PR-2043-0803 -->
+        <a class="b-row b-item" href="/HKR/press/pr-2043-0803">
+          <div class="c1">
+            <time datetime="2043-08-03">2043-08-03</time>
+          </div>
+          <div class="c2">
+            <span class="code">PR-2043-0803</span>
+            <span class="kind">新聞稿</span>
+          </div>
+          <div class="c3">
+            司法行政架構調整與法院運作安排
+          </div>
+          <div class="c4">司法行政署</div>
+          <div class="c5"><span class="status ok">已發布</span></div>
+        </a>
+      </div>
     </div>
 
-    <div class="footnote">
-      三則公告均已建立獨立頁面並完成連結。
+    <div class="col">
+      <h2>公共資訊</h2>
+
+      <div class="info card">
+        <h3>常見查閱</h3>
+        <ul class="list">
+          <li><a href="/HKR/government">政府架構與公共機構</a></li>
+          <li><a href="/HKR/laws">憲政框架與核心法規</a></li>
+          <li><a href="/HKR/timeline">國史年表與官方紀錄</a></li>
+          <li><a href="/HKR/symbols">國旗、國徽與格言</a></li>
+        </ul>
+      </div>
+
+      <div class="info card">
+        <h3>網站狀態</h3>
+        <div class="statusbox">
+          <div class="srow">
+            <span class="k">發布平台</span>
+            <span class="v">GitHub Pages</span>
+          </div>
+          <div class="srow">
+            <span class="k">內容性質</span>
+            <span class="v">官方公開發布</span>
+          </div>
+          <div class="srow">
+            <span class="k">更新方式</span>
+            <span class="v">自動部署</span>
+          </div>
+        </div>
+
+        <div class="mini-note">
+          如遇顯示異常，請嘗試重新整理或清除瀏覽器快取後再試。
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Bottom CTA -->
+  <section class="bottom">
+    <div class="bottom-inner">
+      <div>
+        <h2>查閱政府公告</h2>
+        <p class="muted">
+          公告中心收錄政策發布、官方聲明及新聞稿，並提供可追溯之發布日期與公告編號。
+        </p>
+      </div>
+      <a class="btn primary" href="/HKR/press">進入公告中心</a>
     </div>
   </section>
 
   <style>
-    .head { padding-top: 0.25rem; }
-    .badge {
+    .hero {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 1.5rem;
+      align-items: start;
+      padding: 1.2rem 0 0.5rem;
+    }
+
+    .kicker {
       display: inline-block;
       font-size: 0.85rem;
       letter-spacing: 0.8px;
@@ -101,7 +217,134 @@ const pageDescription =
       border-radius: 999px;
       margin-bottom: 0.75rem;
     }
-    .lead { color: #444; font-size: 1.05rem; max-width: 60rem; }
+
+    .subtitle {
+      font-size: 1.05rem;
+      color: #444;
+      max-width: 44rem;
+      margin: 0.5rem 0 1.25rem;
+    }
+
+    .cta-row {
+      display: flex;
+      gap: 0.75rem;
+      flex-wrap: wrap;
+      margin-bottom: 1.35rem;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.7rem 1rem;
+      border-radius: 12px;
+      text-decoration: none;
+      font-weight: 650;
+      border: 1px solid #e5e5e5;
+    }
+
+    .btn.primary {
+      background: #b80000;
+      color: #fff;
+      border-color: #b80000;
+    }
+
+    .btn.primary:hover {
+      filter: brightness(0.95);
+    }
+
+    .btn.ghost {
+      background: #fff;
+      color: #111;
+    }
+
+    .btn.ghost:hover {
+      background: #f3f3f3;
+    }
+
+    .meta {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 0.75rem;
+      margin-top: 0.5rem;
+    }
+
+    .meta-item {
+      border: 1px solid #e7e7e7;
+      border-radius: 14px;
+      padding: 0.85rem;
+      background: #fff;
+    }
+
+    .meta-label {
+      font-size: 0.8rem;
+      color: #666;
+    }
+
+    .meta-value {
+      margin-top: 0.2rem;
+      font-weight: 700;
+      color: #111;
+    }
+
+    .panel {
+      border: 1px solid #e7e7e7;
+      border-radius: 16px;
+      background: #fafafa;
+      padding: 1rem;
+    }
+
+    .panel-head {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 1rem;
+      padding: 0.3rem 0.2rem 0.9rem;
+      border-bottom: 1px solid #e7e7e7;
+      margin-bottom: 0.9rem;
+    }
+
+    .panel-title {
+      font-weight: 800;
+      letter-spacing: 0.3px;
+    }
+
+    .panel-sub {
+      color: #666;
+      font-size: 0.9rem;
+      white-space: nowrap;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 0.75rem;
+    }
+
+    .tile {
+      display: block;
+      border: 1px solid #e7e7e7;
+      border-radius: 14px;
+      padding: 0.9rem;
+      background: #fff;
+      text-decoration: none;
+      color: #111;
+    }
+
+    .tile:hover {
+      border-color: #b80000;
+      box-shadow: 0 8px 22px rgba(0, 0, 0, 0.06);
+    }
+
+    .tile-title {
+      font-weight: 800;
+      margin-bottom: 0.25rem;
+    }
+
+    .tile-desc {
+      color: #666;
+      font-size: 0.92rem;
+    }
 
     .notice {
       margin-top: 1.35rem;
@@ -114,33 +357,202 @@ const pageDescription =
       align-items: center;
     }
 
-    .board {
-      margin-top: 1.6rem;
-      border: 1px solid #e7e7e7;
-      border-radius: 18px;
-      background: #fff;
-      overflow: hidden;
+    .notice-badge {
+      background: #111;
+      color: #fff;
+      font-size: 0.82rem;
+      padding: 0.25rem 0.6rem;
+      border-radius: 999px;
+      white-space: nowrap;
     }
 
-    .row {
+    .notice-text {
+      color: #444;
+    }
+
+    .two-col {
+      margin-top: 2.2rem;
+      display: grid;
+      grid-template-columns: 1fr 0.9fr;
+      gap: 1.5rem;
+    }
+
+    .section-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .headlink {
+      text-decoration: none;
+      font-weight: 850;
+      color: #b80000;
+      white-space: nowrap;
+    }
+
+    .headlink:hover {
+      text-decoration: underline;
+    }
+
+    .bulletin {
+      margin-top: 0.9rem;
+      border: 1px solid #e7e7e7;
+      border-radius: 18px;
+      overflow: hidden;
+      background: #fff;
+    }
+
+    .b-row {
       display: grid;
       grid-template-columns: 140px 190px 1fr 160px 120px;
       gap: 0.8rem;
-      padding: 0.9rem 1rem;
+      padding: 0.85rem 1rem;
+      align-items: center;
       border-bottom: 1px solid #eeeeee;
     }
 
-    .headrow {
+    .b-head {
       background: #fafafa;
       font-weight: 900;
+      color: #333;
       font-size: 0.92rem;
     }
 
-    .item { text-decoration: none; color: #111; }
-    .item:hover { box-shadow: inset 0 0 0 1px #b80000; }
+    .b-item {
+      text-decoration: none;
+      color: #111;
+    }
+
+    .b-item:hover {
+      background: #fff;
+      box-shadow: inset 0 0 0 1px #b80000;
+    }
+
+    .code {
+      display: block;
+      font-weight: 900;
+      color: #111;
+      font-size: 0.92rem;
+    }
+
+    .kind {
+      display: inline-flex;
+      margin-top: 0.25rem;
+      padding: 0.14rem 0.5rem;
+      border-radius: 999px;
+      border: 1px solid #e7e7e7;
+      background: #fafafa;
+      color: #333;
+      font-weight: 800;
+      font-size: 0.82rem;
+      width: fit-content;
+    }
+
+    .status {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.18rem 0.55rem;
+      border-radius: 999px;
+      border: 1px solid #e7e7e7;
+      background: #fafafa;
+      font-weight: 900;
+      font-size: 0.86rem;
+      white-space: nowrap;
+    }
+
+    .status.ok {
+      color: #111;
+    }
+
+    .card {
+      border: 1px solid #e7e7e7;
+      border-radius: 16px;
+      padding: 1rem;
+      background: #fff;
+      margin-top: 0.9rem;
+    }
+
+    .list {
+      margin: 0.4rem 0 0;
+      padding-left: 1.2rem;
+      color: #333;
+    }
+
+    .list li {
+      margin: 0.45rem 0;
+    }
+
+    .statusbox {
+      margin-top: 0.55rem;
+      display: grid;
+      gap: 0.45rem;
+    }
+
+    .srow {
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+      padding: 0.55rem 0.7rem;
+      border-radius: 12px;
+      background: #fafafa;
+      border: 1px solid #eeeeee;
+    }
+
+    .srow .k {
+      color: #666;
+    }
+
+    .srow .v {
+      font-weight: 900;
+      color: #111;
+      white-space: nowrap;
+    }
+
+    .mini-note {
+      margin-top: 0.75rem;
+      color: #666;
+      font-size: 0.92rem;
+    }
+
+    .bottom {
+      margin-top: 2.2rem;
+    }
+
+    .bottom-inner {
+      border: 1px solid #e7e7e7;
+      border-radius: 18px;
+      padding: 1.2rem;
+      background: #fafafa;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .muted {
+      color: #555;
+      margin: 0.35rem 0 0;
+      max-width: 46rem;
+    }
 
     @media (max-width: 1080px) {
-      .row { grid-template-columns: 1fr; }
+      .hero {
+        grid-template-columns: 1fr;
+      }
+      .two-col {
+        grid-template-columns: 1fr;
+      }
+      .meta {
+        grid-template-columns: 1fr;
+      }
+      .b-row {
+        grid-template-columns: 1fr;
+        align-items: start;
+      }
     }
   </style>
 </BaseLayout>
