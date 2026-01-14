@@ -3,7 +3,7 @@ import BaseLayout from "@layouts/BaseLayout.astro";
 
 const pageTitle = "政府｜香港共和國";
 const pageDescription =
-  "香港共和國政府架構：國家元首、行政、立法、司法與獨立機構。";
+  "香港共和國政府架構：憲制機關、權力分立與獨立公共機構（官方概述）。";
 ---
 
 <BaseLayout title={pageTitle} description={pageDescription}>
@@ -12,97 +12,152 @@ const pageDescription =
     <h1>政府</h1>
     <p class="lead">
       香港共和國政府依憲政框架運作，確保權力分立、機關問責與公共服務之持續性。
-      本頁概述主要憲制機關與獨立公共機構。
+      本頁為主要憲制機關與獨立公共機構之官方概述版本。
     </p>
   </section>
 
-  <section class="overview">
-    <div class="card">
-      <h2>國家元首</h2>
-      <p>
-        總統為國家元首，代表共和國對外行使國家禮儀與憲制職能，並依法律任命高級官員，
-        維護憲制秩序與國家安全。
-      </p>
-    </div>
-
-    <div class="card">
-      <h2>行政權</h2>
-      <p>
-        行政權由政府行使，行政總理由法律授權負責統籌政策執行、公共行政、國家安全與經濟治理。
-        各政策局與公共機構依法履行職權。
-      </p>
-    </div>
-
-    <div class="card">
-      <h2>立法權</h2>
-      <p>
-        立法權由兩院制立法機關行使，包括「公民院」及「專業院」。立法機關負責制定法律、
-        審議預算、監督行政及確保制度透明。
-      </p>
-    </div>
-
-    <div class="card">
-      <h2>司法權</h2>
-      <p>
-        司法機關獨立行使審判權，保障法治與正當程序。法院對公共權力之行使具有司法審查權，
-        以確保所有公權力均受憲法與法律約束。
-      </p>
+  <section class="notice">
+    <div class="notice-badge">提示</div>
+    <div class="notice-text">
+      本頁為概述資訊。各機關之具體職權、程序及授權範圍，以正式法律文本與政府公告為準。
     </div>
   </section>
 
-  <section class="institutions">
+  <section class="section">
     <div class="section-head">
-      <h2>獨立公共機構</h2>
-      <div class="sub">依法設立，獨立履職，確保公共信任與制度穩定</div>
+      <h2>憲制機關</h2>
+      <div class="sub">權力分立與制度運作之核心機關</div>
     </div>
 
     <div class="grid">
-      <div class="tile">
-        <div class="tile-title">金融安全局</div>
-        <div class="tile-desc">
-          負責金融穩定、系統性風險監測、市場完整性與關鍵結算基礎設施之安全保障。
+      <div class="org">
+        <div class="org-top">
+          <div class="org-title">總統（國家元首）</div>
+          <span class="pill">憲制職位</span>
+        </div>
+        <div class="org-desc">
+          代表共和國對外行使國家禮儀與憲制職能，依法任命高級官員，維護憲制秩序與國家安全。
+        </div>
+        <div class="org-meta">
+          <span class="k">職能</span><span class="v">對外代表 · 憲制保障</span>
         </div>
       </div>
 
-      <div class="tile">
-        <div class="tile-title">審計署</div>
-        <div class="tile-desc">
-          負責公共財政審計、支出合規性檢查與公共資源使用效率之評估。
+      <div class="org">
+        <div class="org-top">
+          <div class="org-title">政府（行政權）</div>
+          <span class="pill">行政機關</span>
+        </div>
+        <div class="org-desc">
+          由行政總理統籌政策執行、公共行政、國家安全與經濟治理；各政策局與公共機構依法履職。
+        </div>
+        <div class="org-meta">
+          <span class="k">職能</span><span class="v">政策執行 · 公共行政</span>
         </div>
       </div>
 
-      <div class="tile">
-        <div class="tile-title">選舉委員會</div>
-        <div class="tile-desc">
-          負責選舉制度之執行、選民登記、投票安排及選舉程序之公正與透明。
+      <div class="org">
+        <div class="org-top">
+          <div class="org-title">立法機關（兩院制）</div>
+          <span class="pill">立法機關</span>
+        </div>
+        <div class="org-desc">
+          由公民院及專業院組成，負責制定法律、審議預算、監督行政及確保制度透明與公共問責。
+        </div>
+        <div class="org-meta">
+          <span class="k">組成</span><span class="v">公民院 · 專業院</span>
         </div>
       </div>
 
-      <div class="tile">
-        <div class="tile-title">公共廉政委員會</div>
-        <div class="tile-desc">
-          負責防貪監督、利益申報與公共誠信制度之維護，確保政府行為可追溯與可監督。
+      <div class="org">
+        <div class="org-top">
+          <div class="org-title">司法機關（法院）</div>
+          <span class="pill">獨立審判</span>
+        </div>
+        <div class="org-desc">
+          獨立行使審判權，保障法治與正當程序；依法對公共權力行使進行司法審查，確保公權力受法律約束。
+        </div>
+        <div class="org-meta">
+          <span class="k">原則</span><span class="v">司法獨立 · 程序正義</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-head">
+      <h2>獨立公共機構</h2>
+      <div class="sub">依法設立，獨立履職，確保制度穩定與公共信任</div>
+    </div>
+
+    <div class="grid">
+      <div class="org soft">
+        <div class="org-top">
+          <div class="org-title">金融安全局</div>
+          <span class="pill">獨立機構</span>
+        </div>
+        <div class="org-desc">
+          負責金融穩定、系統性風險監測、市場誠信與關鍵結算基礎設施之安全保障。
+        </div>
+        <div class="org-meta">
+          <span class="k">範圍</span><span class="v">金融穩定 · 結算基建</span>
+        </div>
+      </div>
+
+      <div class="org soft">
+        <div class="org-top">
+          <div class="org-title">審計署</div>
+          <span class="pill">獨立機構</span>
+        </div>
+        <div class="org-desc">
+          負責公共財政審計、支出合規性檢查與公共資源使用效率之評估與報告。
+        </div>
+        <div class="org-meta">
+          <span class="k">範圍</span><span class="v">公共財政 · 合規審計</span>
+        </div>
+      </div>
+
+      <div class="org soft">
+        <div class="org-top">
+          <div class="org-title">選舉委員會</div>
+          <span class="pill">獨立機構</span>
+        </div>
+        <div class="org-desc">
+          負責選民登記、投票安排、程序監督與選舉公正，確保選舉制度之透明與可核查性。
+        </div>
+        <div class="org-meta">
+          <span class="k">範圍</span><span class="v">選務 · 監督</span>
+        </div>
+      </div>
+
+      <div class="org soft">
+        <div class="org-top">
+          <div class="org-title">公共廉政委員會</div>
+          <span class="pill">獨立機構</span>
+        </div>
+        <div class="org-desc">
+          負責防貪監督、利益申報、公共誠信制度維護與調查程序，確保政府行為可追溯與可監督。
+        </div>
+        <div class="org-meta">
+          <span class="k">範圍</span><span class="v">廉政 · 反貪</span>
         </div>
       </div>
     </div>
   </section>
 
   <section class="links">
-    <div class="link-card">
-      <h2>相關查閱</h2>
-      <ul>
-        <li><a href="/HKR/laws">憲政框架與核心法規</a></li>
-        <li><a href="/HKR/press">官方公告與新聞稿</a></li>
-        <li><a href="/HKR/timeline">國史年表與官方紀錄</a></li>
-      </ul>
-    </div>
-
-    <div class="link-card">
-      <h2>提示</h2>
-      <p class="note">
-        本頁為政府架構之概述版本。各機關之詳細職權、程序及授權範圍，以正式法律文本與公告為準。
-      </p>
-    </div>
+    <a class="link" href="/HKR/laws">
+      <span class="l-title">法律入口</span>
+      <span class="l-desc">憲政框架與核心法規概述</span>
+    </a>
+    <a class="link" href="/HKR/press">
+      <span class="l-title">公告中心</span>
+      <span class="l-desc">政策通告、新聞稿與官方聲明</span>
+    </a>
+    <a class="link" href="/HKR/timeline">
+      <span class="l-title">國史年表</span>
+      <span class="l-desc">重大事件與官方紀錄</span>
+    </a>
   </section>
 
   <style>
@@ -127,32 +182,32 @@ const pageDescription =
       max-width: 60rem;
     }
 
-    .overview {
-      margin-top: 1.6rem;
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 1rem;
-    }
-
-    .card {
+    .notice {
+      margin-top: 1.35rem;
       border: 1px solid #e7e7e7;
       border-radius: 16px;
-      padding: 1rem;
+      padding: 0.9rem 1rem;
       background: #fff;
+      display: flex;
+      gap: 0.9rem;
+      align-items: center;
     }
 
-    .card h2 {
-      margin: 0 0 0.5rem 0;
-      font-size: 1.2rem;
+    .notice-badge {
+      background: #111;
+      color: #fff;
+      font-size: 0.82rem;
+      padding: 0.25rem 0.6rem;
+      border-radius: 999px;
+      white-space: nowrap;
     }
 
-    .card p {
-      margin: 0.35rem 0 0;
-      color: #333;
+    .notice-text {
+      color: #444;
     }
 
-    .institutions {
-      margin-top: 2.2rem;
+    .section {
+      margin-top: 1.8rem;
     }
 
     .section-head {
@@ -175,65 +230,116 @@ const pageDescription =
       gap: 1rem;
     }
 
-    .tile {
+    .org {
       border: 1px solid #e7e7e7;
-      border-radius: 16px;
-      background: #fafafa;
+      border-radius: 18px;
+      background: #fff;
       padding: 1rem;
     }
 
-    .tile-title {
-      font-weight: 850;
-      margin-bottom: 0.35rem;
+    .org.soft {
+      background: #fafafa;
     }
 
-    .tile-desc {
+    .org-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 1rem;
+      margin-bottom: 0.55rem;
+      flex-wrap: wrap;
+    }
+
+    .org-title {
+      font-weight: 950;
+      letter-spacing: 0.2px;
+    }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      padding: 0.18rem 0.55rem;
+      border-radius: 999px;
+      border: 1px solid #e7e7e7;
+      background: #fafafa;
+      color: #333;
+      font-weight: 900;
+      font-size: 0.86rem;
+      white-space: nowrap;
+    }
+
+    .org-desc {
       color: #444;
       font-size: 0.98rem;
     }
 
+    .org-meta {
+      margin-top: 0.75rem;
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+      padding: 0.55rem 0.7rem;
+      border-radius: 14px;
+      background: #fafafa;
+      border: 1px solid #eeeeee;
+    }
+
+    .org-meta .k {
+      color: #666;
+      white-space: nowrap;
+    }
+
+    .org-meta .v {
+      font-weight: 900;
+      color: #111;
+      white-space: nowrap;
+    }
+
     .links {
-      margin-top: 2.2rem;
+      margin-top: 2rem;
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
       gap: 1rem;
     }
 
-    .link-card {
+    .link {
+      display: block;
       border: 1px solid #e7e7e7;
       border-radius: 16px;
+      background: #fafafa;
       padding: 1rem;
+      text-decoration: none;
+      color: #111;
+    }
+
+    .link:hover {
+      border-color: #b80000;
       background: #fff;
+      box-shadow: 0 10px 26px rgba(0, 0, 0, 0.06);
     }
 
-    .link-card h2 {
-      margin: 0 0 0.5rem 0;
-      font-size: 1.2rem;
+    .l-title {
+      display: block;
+      font-weight: 950;
+      margin-bottom: 0.25rem;
     }
 
-    .link-card ul {
-      margin: 0.4rem 0 0;
-      padding-left: 1.2rem;
-    }
-
-    .link-card li {
-      margin: 0.45rem 0;
-    }
-
-    .note {
-      margin: 0.25rem 0 0;
-      color: #444;
+    .l-desc {
+      display: block;
+      color: #555;
+      font-size: 0.95rem;
     }
 
     @media (max-width: 980px) {
-      .overview {
-        grid-template-columns: 1fr;
-      }
       .grid {
         grid-template-columns: 1fr;
       }
       .links {
         grid-template-columns: 1fr;
+      }
+      .org-meta .v {
+        white-space: normal;
+        text-align: right;
       }
     }
   </style>
