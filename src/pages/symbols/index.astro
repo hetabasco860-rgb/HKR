@@ -1,99 +1,65 @@
 ---
 import BaseLayout from "@layouts/BaseLayout.astro";
 
-const pageTitle = "國家象徵｜香港共和國";
-const pageDescription =
-  "香港共和國國家象徵：國旗、國徽與國家格言之官方展示與使用說明。";
+const pageTitle = "找不到頁面（404）｜香港共和國";
+const pageDescription = "所請求的頁面不存在或已被移除。";
 ---
 
 <BaseLayout title={pageTitle} description={pageDescription}>
-  <section class="head">
-    <div class="badge">國家象徵</div>
-    <h1>國家象徵</h1>
+  <section class="wrap">
+    <div class="badge">系統提示</div>
+    <h1>找不到頁面（404）</h1>
     <p class="lead">
-      本頁展示香港共和國之國家象徵，並列明其官方用途與使用規範。所有再製、展示與引用，
-      均須符合相關法律與官方技術規格。
+      所請求的資源在此地址無法取得。請檢查網址是否正確，或使用下列官方入口返回。
     </p>
-  </section>
 
-  <section class="symbols">
-    <div class="symbol-card">
-      <div class="symbol-head">
-        <h2>國旗</h2>
-        <div class="symbol-meta">官方版本（SVG）</div>
+    <div class="panel">
+      <div class="panel-head">
+        <div class="panel-title">建議操作</div>
+        <div class="panel-sub">官方導覽入口</div>
       </div>
 
-      <div class="media flag">
-        <img
-          src="/HKR/assets/flag.svg"
-          alt="香港共和國國旗"
-          loading="eager"
-        />
-      </div>
+      <div class="grid" aria-label="官方入口">
+        <a class="tile" href="/HKR/">
+          <div class="tile-title">首頁</div>
+          <div class="tile-desc">返回官方門戶首頁</div>
+        </a>
 
-      <div class="desc">
-        國旗為國家之主要視覺象徵，適用於政府建築、官方網站、外交場合與依法規定之公共用途。
-      </div>
+        <a class="tile" href="/HKR/press">
+          <div class="tile-title">公告</div>
+          <div class="tile-desc">政策發布、新聞稿與官方聲明</div>
+        </a>
 
-      <div class="downloads">
-        <a href="/HKR/assets/flag.svg" download class="file">
-          <span class="fname">國旗（SVG）</span>
-          <span class="ftype">向量格式</span>
+        <a class="tile" href="/HKR/government">
+          <div class="tile-title">政府</div>
+          <div class="tile-desc">憲制機關與公共機構概述</div>
+        </a>
+
+        <a class="tile" href="/HKR/laws">
+          <div class="tile-title">法律</div>
+          <div class="tile-desc">憲政框架與核心法規入口</div>
+        </a>
+
+        <a class="tile" href="/HKR/timeline">
+          <div class="tile-title">年表</div>
+          <div class="tile-desc">國史紀錄與重大事件</div>
+        </a>
+
+        <a class="tile" href="/HKR/symbols">
+          <div class="tile-title">國家象徵</div>
+          <div class="tile-desc">國旗、國徽與格言</div>
         </a>
       </div>
     </div>
 
-    <div class="symbol-card">
-      <div class="symbol-head">
-        <h2>國徽</h2>
-        <div class="symbol-meta">官方版本（SVG）</div>
-      </div>
-
-      <div class="media emblem">
-        <img
-          src="/HKR/assets/emblem.svg"
-          alt="香港共和國國徽"
-          loading="eager"
-        />
-      </div>
-
-      <div class="desc">
-        國徽用於政府文件、公報、法律文本、官方網站頁首與頁尾，以及依法授權之正式用途。
-      </div>
-
-      <div class="downloads">
-        <a href="/HKR/assets/emblem.svg" download class="file">
-          <span class="fname">國徽（SVG）</span>
-          <span class="ftype">向量格式</span>
-        </a>
-      </div>
+    <div class="note">
+      若您由外部連結進入此頁面，建議返回來源頁面並更新書籤或引用連結。
     </div>
-
-    <div class="symbol-card">
-      <div class="symbol-head">
-        <h2>國家格言</h2>
-        <div class="symbol-meta">官方文本</div>
-      </div>
-
-      <blockquote class="motto">
-        From the Harbour, We Govern Ourselves.
-      </blockquote>
-
-      <div class="desc">
-        國家格言用於官方出版物、外交文件與國家象徵展示中，以表述共和國之治理原則與歷史來源。
-      </div>
-    </div>
-  </section>
-
-  <section class="note">
-    <strong>使用提示：</strong>
-    未經授權，不得擅自修改、變形、重新配色或將國家象徵用於誤導性或商業性用途。
-    詳細規範以正式法律與公告為準。
   </section>
 
   <style>
-    .head {
-      padding-top: 0.25rem;
+    .wrap {
+      max-width: 920px;
     }
 
     .badge {
@@ -101,7 +67,7 @@ const pageDescription =
       font-size: 0.85rem;
       letter-spacing: 0.8px;
       color: #fff;
-      background: #b80000;
+      background: #111;
       padding: 0.25rem 0.55rem;
       border-radius: 999px;
       margin-bottom: 0.75rem;
@@ -113,117 +79,81 @@ const pageDescription =
       max-width: 60rem;
     }
 
-    .symbols {
-      margin-top: 1.8rem;
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 1rem;
-    }
-
-    .symbol-card {
+    .panel {
+      margin-top: 1.3rem;
       border: 1px solid #e7e7e7;
       border-radius: 18px;
       background: #fff;
-      padding: 1rem;
-      display: flex;
-      flex-direction: column;
+      overflow: hidden;
     }
 
-    .symbol-head {
+    .panel-head {
       display: flex;
       justify-content: space-between;
       align-items: baseline;
       gap: 1rem;
-      margin-bottom: 0.6rem;
+      padding: 1rem 1rem 0.85rem;
+      background: #fafafa;
+      border-bottom: 1px solid #eeeeee;
+      flex-wrap: wrap;
     }
 
-    .symbol-meta {
-      font-size: 0.9rem;
+    .panel-title {
+      font-weight: 900;
+      letter-spacing: 0.2px;
+    }
+
+    .panel-sub {
       color: #666;
+      font-size: 0.92rem;
       white-space: nowrap;
     }
 
-    .media {
-      border: 1px solid #e7e7e7;
-      border-radius: 14px;
-      background: #fafafa;
-      padding: 0.8rem;
-      margin-bottom: 0.6rem;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 160px;
+    .grid {
+      padding: 1rem;
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 0.8rem;
     }
 
-    .media.flag img {
-      width: 100%;
-      height: auto;
-    }
-
-    .media.emblem img {
-      max-width: 260px;
-      width: 100%;
-      height: auto;
-    }
-
-    .desc {
-      color: #444;
-      font-size: 0.98rem;
-      margin-bottom: 0.6rem;
-    }
-
-    .downloads {
-      margin-top: auto;
-      border-top: 1px solid #eeeeee;
-      padding-top: 0.6rem;
-    }
-
-    .file {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      text-decoration: none;
-      border: 1px solid #e7e7e7;
-      border-radius: 12px;
-      padding: 0.6rem 0.8rem;
-      background: #fafafa;
-      color: #111;
-    }
-
-    .file:hover {
-      border-color: #b80000;
-      background: #fff;
-    }
-
-    .fname {
-      font-weight: 850;
-    }
-
-    .ftype {
-      font-size: 0.88rem;
-      color: #666;
-    }
-
-    .motto {
-      margin: 0.8rem 0 0.6rem;
-      padding: 0.9rem 1rem;
-      border-left: 4px solid #b80000;
-      background: #fafafa;
-      font-weight: 800;
-      font-size: 1.05rem;
-    }
-
-    .note {
-      margin-top: 1.8rem;
+    .tile {
+      display: block;
       border: 1px solid #e7e7e7;
       border-radius: 16px;
       background: #fafafa;
-      padding: 1rem;
-      color: #444;
+      padding: 0.95rem;
+      text-decoration: none;
+      color: #111;
+    }
+
+    .tile:hover {
+      border-color: #b80000;
+      background: #fff;
+      box-shadow: 0 10px 26px rgba(0, 0, 0, 0.06);
+    }
+
+    .tile-title {
+      font-weight: 900;
+      margin-bottom: 0.25rem;
+    }
+
+    .tile-desc {
+      color: #555;
+      font-size: 0.95rem;
+    }
+
+    .note {
+      margin-top: 1.25rem;
+      border: 1px solid #e7e7e7;
+      border-radius: 16px;
+      background: #fafafa;
+      padding: 0.95rem 1rem;
+      color: #555;
+      font-size: 0.98rem;
     }
 
     @media (max-width: 980px) {
-      .symbols {
+      .grid {
         grid-template-columns: 1fr;
       }
     }
