@@ -38,6 +38,21 @@ const pageDescription =
         <div class="c5">狀態</div>
       </div>
 
+      <!-- ✅ 這一條現在真正連到單篇公告 -->
+      <a class="row item" href="/HKR/press/pr-2043-0715">
+        <div class="c1"><time datetime="2043-07-15">2043-07-15</time></div>
+        <div class="c2">
+          <span class="code">PR-2043-0715</span>
+          <span class="kind">政策通告</span>
+        </div>
+        <div class="c3">
+          金融連續性與市場運作安排通告
+          <div class="excerpt">市場結算、合約連續性與金融系統運作安排之公告與實施指引。</div>
+        </div>
+        <div class="c4">金融安全局</div>
+        <div class="c5"><span class="status ok">已發布</span></div>
+      </a>
+
       <a class="row item" href="/HKR/press">
         <div class="c1"><time datetime="2043-08-03">2043-08-03</time></div>
         <div class="c2">
@@ -49,20 +64,6 @@ const pageDescription =
           <div class="excerpt">法院行政與程序安排更新，並重申司法獨立與正當程序保障。</div>
         </div>
         <div class="c4">司法行政署</div>
-        <div class="c5"><span class="status ok">已發布</span></div>
-      </a>
-
-      <a class="row item" href="/HKR/press">
-        <div class="c1"><time datetime="2043-07-15">2043-07-15</time></div>
-        <div class="c2">
-          <span class="code">PR-2043-0715</span>
-          <span class="kind">政策通告</span>
-        </div>
-        <div class="c3">
-          金融連續性與市場運作安排通告
-          <div class="excerpt">市場結算、合約連續性與金融系統運作安排之公告與實施指引。</div>
-        </div>
-        <div class="c4">金融安全局</div>
         <div class="c5"><span class="status ok">已發布</span></div>
       </a>
 
@@ -82,15 +83,12 @@ const pageDescription =
     </div>
 
     <div class="footnote">
-      下一步可建立每則公告的獨立頁面（永久連結），並加入檢索（按編號、日期、機關、類別）。
+      下一步可逐一建立其餘公告之獨立頁面，並補齊永久連結與引用格式。
     </div>
   </section>
 
   <style>
-    .head {
-      padding-top: 0.25rem;
-    }
-
+    .head { padding-top: 0.25rem; }
     .badge {
       display: inline-block;
       font-size: 0.85rem;
@@ -101,12 +99,7 @@ const pageDescription =
       border-radius: 999px;
       margin-bottom: 0.75rem;
     }
-
-    .lead {
-      color: #444;
-      font-size: 1.05rem;
-      max-width: 60rem;
-    }
+    .lead { color: #444; font-size: 1.05rem; max-width: 60rem; }
 
     .notice {
       margin-top: 1.35rem;
@@ -118,7 +111,6 @@ const pageDescription =
       gap: 0.9rem;
       align-items: center;
     }
-
     .notice-badge {
       background: #111;
       color: #fff;
@@ -126,10 +118,6 @@ const pageDescription =
       padding: 0.25rem 0.6rem;
       border-radius: 999px;
       white-space: nowrap;
-    }
-
-    .notice-text {
-      color: #444;
     }
 
     .board {
@@ -151,21 +139,6 @@ const pageDescription =
       flex-wrap: wrap;
     }
 
-    .board-head h2 {
-      margin: 0;
-      font-size: 1.25rem;
-    }
-
-    .meta {
-      color: #666;
-      font-size: 0.92rem;
-      white-space: nowrap;
-    }
-
-    .table {
-      display: block;
-    }
-
     .row {
       display: grid;
       grid-template-columns: 140px 190px 1fr 160px 120px;
@@ -180,7 +153,6 @@ const pageDescription =
       font-weight: 900;
       color: #333;
       font-size: 0.92rem;
-      align-items: center;
     }
 
     .item {
@@ -193,13 +165,7 @@ const pageDescription =
       box-shadow: inset 0 0 0 1px #b80000;
     }
 
-    .code {
-      display: block;
-      font-weight: 900;
-      color: #111;
-      font-size: 0.92rem;
-    }
-
+    .code { font-weight: 900; }
     .kind {
       display: inline-flex;
       margin-top: 0.25rem;
@@ -207,33 +173,19 @@ const pageDescription =
       border-radius: 999px;
       border: 1px solid #e7e7e7;
       background: #fafafa;
-      color: #333;
       font-weight: 800;
       font-size: 0.82rem;
-      width: fit-content;
     }
 
-    .excerpt {
-      margin-top: 0.35rem;
-      color: #555;
-      font-size: 0.95rem;
-    }
-
+    .excerpt { margin-top: 0.35rem; color: #555; }
     .status {
       display: inline-flex;
-      align-items: center;
-      justify-content: center;
       padding: 0.18rem 0.55rem;
       border-radius: 999px;
       border: 1px solid #e7e7e7;
       background: #fafafa;
       font-weight: 900;
       font-size: 0.86rem;
-      white-space: nowrap;
-    }
-
-    .status.ok {
-      color: #111;
     }
 
     .footnote {
@@ -245,9 +197,7 @@ const pageDescription =
     }
 
     @media (max-width: 1080px) {
-      .row {
-        grid-template-columns: 1fr;
-      }
+      .row { grid-template-columns: 1fr; }
     }
   </style>
 </BaseLayout>
