@@ -1,0 +1,108 @@
+---
+import BaseLayout from "@layouts/BaseLayout.astro";
+
+const pageTitle = "Press and Official Statements | Hong-Kong Republic";
+const pageDescription =
+  "Official press releases, statements, and public communications of the Government of the Hong-Kong Republic.";
+---
+
+<BaseLayout title={pageTitle} description={pageDescription}>
+  <section>
+    <h1>Press and Official Statements</h1>
+    <p class="lead">
+      This section publishes official statements, policy announcements, and
+      press releases issued by the Government of the Hong-Kong Republic.
+    </p>
+  </section>
+
+  <section class="notice">
+    <p>
+      All materials published herein constitute authoritative public
+      communications. Unauthorized alteration or misrepresentation is
+      prohibited.
+    </p>
+  </section>
+
+  <section class="press-list">
+    <h2>Recent Publications</h2>
+
+    <article class="press-item">
+      <time datetime="2043-07-01">1 July 2043</time>
+      <h3>
+        Statement on the Establishment of the Hong-Kong Republic
+      </h3>
+      <p>
+        The Government formally announces the commencement of constitutional
+        governance and the assumption of full administrative responsibilities.
+      </p>
+    </article>
+
+    <article class="press-item">
+      <time datetime="2043-07-15">15 July 2043</time>
+      <h3>
+        Announcement on Financial Continuity and Market Operations
+      </h3>
+      <p>
+        Measures ensuring market stability, contract continuity, and financial
+        settlement arrangements are hereby confirmed.
+      </p>
+    </article>
+  </section>
+</BaseLayout>
+
+<style>
+  .lead {
+    font-size: 1.1rem;
+    color: #444;
+    max-width: 820px;
+  }
+
+  section {
+    margin-top: 2.75rem;
+  }
+
+  h1 {
+    font-size: 2.2rem;
+    margin-bottom: 0.75rem;
+  }
+
+  h2 {
+    font-size: 1.35rem;
+    margin-bottom: 1rem;
+  }
+
+  .notice {
+    border-left: 4px solid #b80000;
+    padding-left: 1rem;
+    color: #555;
+    background: #fafafa;
+  }
+
+  .press-list {
+    margin-top: 2.5rem;
+  }
+
+  .press-item {
+    border-bottom: 1px solid #e5e5e5;
+    padding: 1.25rem 0;
+  }
+
+  .press-item:last-child {
+    border-bottom: none;
+  }
+
+  time {
+    font-size: 0.85rem;
+    color: #777;
+  }
+
+  h3 {
+    margin: 0.35rem 0 0.25rem 0;
+    font-size: 1.05rem;
+  }
+
+  p {
+    margin: 0.25rem 0 0;
+    color: #444;
+  }
+</style>
