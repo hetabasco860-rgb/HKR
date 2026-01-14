@@ -1,112 +1,456 @@
 ---
 import BaseLayout from "@layouts/BaseLayout.astro";
 
-const pageTitle = "Hong-Kong Republic";
-const pageDescription =
-  "Official website of the Government of the Hong-Kong Republic";
+const pageTitle = "香港共和國政府官方網站";
+const pageDescription = "香港共和國政府官方門戶：公告、政府資訊、法律與年表。";
 ---
 
 <BaseLayout title={pageTitle} description={pageDescription}>
+  <!-- Hero -->
   <section class="hero">
-    <h1>Hong-Kong Republic</h1>
-    <p class="subtitle">
-      An open, lawful, and self-governing republic founded in the harbour city
-      of Hong Kong.
-    </p>
+    <div class="hero-left">
+      <div class="kicker">政府官方門戶</div>
+      <h1>香港共和國</h1>
+      <p class="subtitle">
+        提供官方公告、公共資訊、制度架構與法規文件之查閱入口。
+      </p>
+
+      <div class="cta-row">
+        <a class="btn primary" href="/HKR/press">查看最新公告</a>
+        <a class="btn ghost" href="/HKR/government">政府架構</a>
+      </div>
+
+      <div class="meta">
+        <div class="meta-item">
+          <div class="meta-label">主要語言</div>
+          <div class="meta-value">繁體中文（香港）</div>
+        </div>
+        <div class="meta-item">
+          <div class="meta-label">資訊性質</div>
+          <div class="meta-value">官方公開發布</div>
+        </div>
+        <div class="meta-item">
+          <div class="meta-label">更新頻率</div>
+          <div class="meta-value">按需發布</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-right">
+      <div class="panel">
+        <div class="panel-head">
+          <div class="panel-title">快速入口</div>
+          <div class="panel-sub">常用查閱與公共資訊</div>
+        </div>
+
+        <div class="grid">
+          <a class="tile" href="/HKR/press">
+            <div class="tile-title">公告</div>
+            <div class="tile-desc">政策發布、新聞稿與官方聲明</div>
+          </a>
+          <a class="tile" href="/HKR/laws">
+            <div class="tile-title">法律</div>
+            <div class="tile-desc">憲政框架、核心法規與登記</div>
+          </a>
+          <a class="tile" href="/HKR/government">
+            <div class="tile-title">政府</div>
+            <div class="tile-desc">制度、機關與公共機構</div>
+          </a>
+          <a class="tile" href="/HKR/timeline">
+            <div class="tile-title">年表</div>
+            <div class="tile-desc">重大事件與官方紀錄</div>
+          </a>
+          <a class="tile" href="/HKR/symbols">
+            <div class="tile-title">國家象徵</div>
+            <div class="tile-desc">國旗、國徽與格言</div>
+          </a>
+          <a class="tile" href="/HKR/404">
+            <div class="tile-title">聯絡與協助</div>
+            <div class="tile-desc">（將於後續建立）</div>
+          </a>
+        </div>
+      </div>
+    </div>
   </section>
 
-  <section class="overview">
-    <h2>National Overview</h2>
-    <p>
-      The Hong-Kong Republic is a constitutional republic exercising full
-      self-governance over its territory, institutions, and external affairs.
-      It operates under the principles of the rule of law, institutional
-      accountability, and individual liberty.
-    </p>
-  </section>
-
-  <section class="quick-links">
-    <h2>Government Information</h2>
-    <ul>
-      <li>
-        <a href="/HKR/government">
-          Structure of Government and Public Institutions
-        </a>
-      </li>
-      <li>
-        <a href="/HKR/laws">
-          Constitutional Framework and Core Laws
-        </a>
-      </li>
-      <li>
-        <a href="/HKR/timeline">
-          National Timeline and Historical Record
-        </a>
-      </li>
-      <li>
-        <a href="/HKR/press">
-          Official Statements and Press Releases
-        </a>
-      </li>
-    </ul>
-  </section>
-
+  <!-- Notice Bar -->
   <section class="notice">
-    <h2>Official Notice</h2>
-    <p>
-      All information published on this website constitutes official public
-      communications of the Government of the Hong-Kong Republic.
-    </p>
+    <div class="notice-badge">官方提示</div>
+    <div class="notice-text">
+      本網站所載內容屬官方公開發布資訊。未經授權不得擅自更改、剪裁或曲解。
+    </div>
   </section>
+
+  <!-- Latest / Highlights -->
+  <section class="two-col">
+    <div class="col">
+      <h2>最新發布</h2>
+
+      <article class="card">
+        <div class="card-top">
+          <span class="tag">公告</span>
+          <time datetime="2043-07-15">2043-07-15</time>
+        </div>
+        <h3>金融連續性與市場運作安排通告</h3>
+        <p>
+          本通告概述市場結算、合約連續性及金融系統運作之安排，並列明相關執行機構。
+        </p>
+        <a class="more" href="/HKR/press">前往公告中心 →</a>
+      </article>
+
+      <article class="card">
+        <div class="card-top">
+          <span class="tag">聲明</span>
+          <time datetime="2043-07-01">2043-07-01</time>
+        </div>
+        <h3>關於共和國制度運作之正式聲明</h3>
+        <p>
+          政府宣布憲政治理開始運作，公共機構依法履行職權，確保公共服務之持續性。
+        </p>
+        <a class="more" href="/HKR/press">查看更多 →</a>
+      </article>
+    </div>
+
+    <div class="col">
+      <h2>公共資訊</h2>
+
+      <div class="info card">
+        <h3>常見查閱</h3>
+        <ul class="list">
+          <li><a href="/HKR/government">政府架構與公共機構</a></li>
+          <li><a href="/HKR/laws">憲政框架與核心法規</a></li>
+          <li><a href="/HKR/timeline">國史年表與官方紀錄</a></li>
+          <li><a href="/HKR/symbols">國旗、國徽與格言</a></li>
+        </ul>
+      </div>
+
+      <div class="info card">
+        <h3>網站狀態</h3>
+        <div class="status">
+          <div class="status-row">
+            <span class="k">部署</span>
+            <span class="v">GitHub Pages</span>
+          </div>
+          <div class="status-row">
+            <span class="k">版本</span>
+            <span class="v">v1.0</span>
+          </div>
+          <div class="status-row">
+            <span class="k">最後更新</span>
+            <span class="v">按提交自動更新</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Bottom CTA -->
+  <section class="bottom">
+    <div class="bottom-inner">
+      <div>
+        <h2>查閱政府公告</h2>
+        <p class="muted">
+          公告中心收錄政策發布、官方聲明及新聞稿，並提供可追溯之發布日期。
+        </p>
+      </div>
+      <a class="btn primary" href="/HKR/press">進入公告中心</a>
+    </div>
+  </section>
+
+  <style>
+    .hero {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 1.5rem;
+      align-items: start;
+      padding: 1.2rem 0 0.5rem;
+    }
+
+    .kicker {
+      display: inline-block;
+      font-size: 0.85rem;
+      letter-spacing: 0.8px;
+      color: #fff;
+      background: #b80000;
+      padding: 0.25rem 0.55rem;
+      border-radius: 999px;
+      margin-bottom: 0.75rem;
+    }
+
+    .subtitle {
+      font-size: 1.05rem;
+      color: #444;
+      max-width: 44rem;
+      margin: 0.5rem 0 1.25rem;
+    }
+
+    .cta-row {
+      display: flex;
+      gap: 0.75rem;
+      flex-wrap: wrap;
+      margin-bottom: 1.35rem;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.7rem 1rem;
+      border-radius: 12px;
+      text-decoration: none;
+      font-weight: 650;
+      border: 1px solid #e5e5e5;
+    }
+
+    .btn.primary {
+      background: #b80000;
+      color: #fff;
+      border-color: #b80000;
+    }
+
+    .btn.primary:hover {
+      filter: brightness(0.95);
+    }
+
+    .btn.ghost {
+      background: #fff;
+      color: #111;
+    }
+
+    .btn.ghost:hover {
+      background: #f3f3f3;
+    }
+
+    .meta {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 0.75rem;
+      margin-top: 0.5rem;
+    }
+
+    .meta-item {
+      border: 1px solid #e7e7e7;
+      border-radius: 14px;
+      padding: 0.85rem;
+      background: #fff;
+    }
+
+    .meta-label {
+      font-size: 0.8rem;
+      color: #666;
+    }
+
+    .meta-value {
+      margin-top: 0.2rem;
+      font-weight: 700;
+      color: #111;
+    }
+
+    .panel {
+      border: 1px solid #e7e7e7;
+      border-radius: 16px;
+      background: #fafafa;
+      padding: 1rem;
+    }
+
+    .panel-head {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 1rem;
+      padding: 0.3rem 0.2rem 0.9rem;
+      border-bottom: 1px solid #e7e7e7;
+      margin-bottom: 0.9rem;
+    }
+
+    .panel-title {
+      font-weight: 800;
+      letter-spacing: 0.3px;
+    }
+
+    .panel-sub {
+      color: #666;
+      font-size: 0.9rem;
+      white-space: nowrap;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 0.75rem;
+    }
+
+    .tile {
+      display: block;
+      border: 1px solid #e7e7e7;
+      border-radius: 14px;
+      padding: 0.9rem;
+      background: #fff;
+      text-decoration: none;
+      color: #111;
+    }
+
+    .tile:hover {
+      border-color: #b80000;
+      box-shadow: 0 8px 22px rgba(0, 0, 0, 0.06);
+    }
+
+    .tile-title {
+      font-weight: 800;
+      margin-bottom: 0.25rem;
+    }
+
+    .tile-desc {
+      color: #666;
+      font-size: 0.92rem;
+    }
+
+    .notice {
+      margin-top: 1.35rem;
+      border: 1px solid #e7e7e7;
+      border-radius: 16px;
+      padding: 0.9rem 1rem;
+      background: #fff;
+      display: flex;
+      gap: 0.9rem;
+      align-items: center;
+    }
+
+    .notice-badge {
+      background: #111;
+      color: #fff;
+      font-size: 0.82rem;
+      padding: 0.25rem 0.6rem;
+      border-radius: 999px;
+      white-space: nowrap;
+    }
+
+    .notice-text {
+      color: #444;
+    }
+
+    .two-col {
+      margin-top: 2.2rem;
+      display: grid;
+      grid-template-columns: 1fr 0.85fr;
+      gap: 1.5rem;
+    }
+
+    .card {
+      border: 1px solid #e7e7e7;
+      border-radius: 16px;
+      padding: 1rem;
+      background: #fff;
+      margin-top: 0.9rem;
+    }
+
+    .card-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+      color: #666;
+      font-size: 0.9rem;
+    }
+
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      padding: 0.18rem 0.55rem;
+      border-radius: 999px;
+      border: 1px solid #e7e7e7;
+      color: #333;
+      background: #fafafa;
+      font-weight: 650;
+      font-size: 0.85rem;
+    }
+
+    h3 {
+      margin: 0.55rem 0 0.25rem;
+      font-size: 1.05rem;
+    }
+
+    .more {
+      display: inline-block;
+      margin-top: 0.55rem;
+      text-decoration: none;
+      font-weight: 700;
+      color: #b80000;
+    }
+
+    .more:hover {
+      text-decoration: underline;
+    }
+
+    .list {
+      margin: 0.4rem 0 0;
+      padding-left: 1.2rem;
+      color: #333;
+    }
+
+    .list li {
+      margin: 0.45rem 0;
+    }
+
+    .status {
+      margin-top: 0.5rem;
+      display: grid;
+      gap: 0.45rem;
+    }
+
+    .status-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+      padding: 0.5rem 0.6rem;
+      border-radius: 12px;
+      background: #fafafa;
+      border: 1px solid #eeeeee;
+    }
+
+    .status-row .k {
+      color: #666;
+    }
+
+    .status-row .v {
+      font-weight: 750;
+      color: #111;
+      white-space: nowrap;
+    }
+
+    .bottom {
+      margin-top: 2.2rem;
+    }
+
+    .bottom-inner {
+      border: 1px solid #e7e7e7;
+      border-radius: 18px;
+      padding: 1.2rem;
+      background: #fafafa;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .muted {
+      color: #555;
+      margin: 0.35rem 0 0;
+      max-width: 46rem;
+    }
+
+    @media (max-width: 980px) {
+      .hero {
+        grid-template-columns: 1fr;
+      }
+      .two-col {
+        grid-template-columns: 1fr;
+      }
+      .meta {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
 </BaseLayout>
-
-<style>
-  .hero {
-    margin-bottom: 3rem;
-  }
-
-  h1 {
-    font-size: 2.6rem;
-    margin-bottom: 0.5rem;
-  }
-
-  .subtitle {
-    font-size: 1.15rem;
-    color: #555;
-    max-width: 720px;
-  }
-
-  section {
-    margin-top: 3rem;
-  }
-
-  h2 {
-    font-size: 1.4rem;
-    margin-bottom: 0.75rem;
-  }
-
-  .quick-links ul {
-    list-style: none;
-    padding: 0;
-  }
-
-  .quick-links li {
-    margin-bottom: 0.5rem;
-  }
-
-  .quick-links a {
-    text-decoration: none;
-    color: #b80000;
-  }
-
-  .quick-links a:hover {
-    text-decoration: underline;
-  }
-
-  .notice {
-    border-top: 1px solid #e5e5e5;
-    padding-top: 1.5rem;
-    font-size: 0.95rem;
-    color: #444;
-  }
-</style>
