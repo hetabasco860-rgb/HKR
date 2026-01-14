@@ -1,100 +1,88 @@
 ---
 import BaseLayout from "@layouts/BaseLayout.astro";
 
-const pageTitle = "官方公告｜香港共和國";
+const pageTitle = "公告中心｜香港共和國";
 const pageDescription =
-  "香港共和國政府官方公告：政策發布、新聞稿、官方聲明與公共通告。";
+  "香港共和國政府公告中心：政策通告、新聞稿與官方聲明（按日期與公告編號排列）。";
 ---
 
 <BaseLayout title={pageTitle} description={pageDescription}>
   <section class="head">
     <div class="badge">公告中心</div>
-    <h1>官方公告</h1>
+    <h1>公告中心</h1>
     <p class="lead">
-      本頁收錄政府部門與公共機構之官方發布，包括政策公告、新聞稿與官方聲明。內容按日期排序，
-      以公開發布版本為準。
+      本頁收錄政府部門與公共機構之官方發布（示例）。公告按日期排序（最新在前），並以公告編號作可追溯識別。
+      如出現版本差異，以正式登載版本為準。
     </p>
   </section>
 
-  <section class="tools">
-    <div class="tool-card">
-      <div class="tool-title">查閱指引</div>
-      <ul>
-        <li>公告以發布日期排序（最新在前）。</li>
-        <li>如出現版本差異，以政府正式登載版本為準。</li>
-        <li>未經授權不得擅自更改、節錄或曲解公告內容。</li>
-      </ul>
-    </div>
-
-    <div class="tool-card">
-      <div class="tool-title">分類</div>
-      <div class="chips" aria-label="公告分類（展示用）">
-        <span class="chip">政策通告</span>
-        <span class="chip">新聞稿</span>
-        <span class="chip">官方聲明</span>
-        <span class="chip">市場與金融</span>
-        <span class="chip">司法與法治</span>
-        <span class="chip">公共服務</span>
-      </div>
+  <section class="notice">
+    <div class="notice-badge">官方提示</div>
+    <div class="notice-text">
+      未經授權不得擅自更改、剪裁或曲解公告內容。引用時應保留公告編號、發布日期與發布機關。
     </div>
   </section>
 
-  <section class="list">
-    <div class="list-head">
+  <section class="board">
+    <div class="board-head">
       <h2>最新發布</h2>
-      <div class="list-meta">共 3 則（示例）</div>
+      <div class="meta">共 3 則（示例）</div>
     </div>
 
-    <article class="item">
-      <div class="item-left">
-        <time datetime="2043-07-15" class="date">2043-07-15</time>
-        <span class="type">政策通告</span>
+    <div class="table">
+      <div class="row headrow">
+        <div class="c1">日期</div>
+        <div class="c2">編號 / 類別</div>
+        <div class="c3">標題</div>
+        <div class="c4">發布機關</div>
+        <div class="c5">狀態</div>
       </div>
-      <div class="item-main">
-        <h3 class="title">金融連續性與市場運作安排通告</h3>
-        <p class="excerpt">
-          概述市場結算、合約連續性及金融系統運作之安排，並列明相關執行機構與適用範圍。
-        </p>
-      </div>
-      <div class="item-right">
-        <a class="btn" href="/HKR/press">查閱</a>
-      </div>
-    </article>
 
-    <article class="item">
-      <div class="item-left">
-        <time datetime="2043-07-01" class="date">2043-07-01</time>
-        <span class="type">官方聲明</span>
-      </div>
-      <div class="item-main">
-        <h3 class="title">關於共和國制度運作之正式聲明</h3>
-        <p class="excerpt">
-          政府宣布憲政治理開始運作，公共機構依法履行職權，確保公共服務之持續性。
-        </p>
-      </div>
-      <div class="item-right">
-        <a class="btn" href="/HKR/press">查閱</a>
-      </div>
-    </article>
+      <a class="row item" href="/HKR/press">
+        <div class="c1"><time datetime="2043-08-03">2043-08-03</time></div>
+        <div class="c2">
+          <span class="code">PR-2043-0803</span>
+          <span class="kind">新聞稿</span>
+        </div>
+        <div class="c3">
+          司法行政架構調整與法院運作安排
+          <div class="excerpt">法院行政與程序安排更新，並重申司法獨立與正當程序保障。</div>
+        </div>
+        <div class="c4">司法行政署</div>
+        <div class="c5"><span class="status ok">已發布</span></div>
+      </a>
 
-    <article class="item">
-      <div class="item-left">
-        <time datetime="2043-08-03" class="date">2043-08-03</time>
-        <span class="type">新聞稿</span>
-      </div>
-      <div class="item-main">
-        <h3 class="title">司法行政架構調整與法院運作安排</h3>
-        <p class="excerpt">
-          交代法院行政與程序安排之最新措施，並重申司法獨立及正當程序保障。
-        </p>
-      </div>
-      <div class="item-right">
-        <a class="btn" href="/HKR/press">查閱</a>
-      </div>
-    </article>
+      <a class="row item" href="/HKR/press">
+        <div class="c1"><time datetime="2043-07-15">2043-07-15</time></div>
+        <div class="c2">
+          <span class="code">PR-2043-0715</span>
+          <span class="kind">政策通告</span>
+        </div>
+        <div class="c3">
+          金融連續性與市場運作安排通告
+          <div class="excerpt">市場結算、合約連續性與金融系統運作安排之公告與實施指引。</div>
+        </div>
+        <div class="c4">金融安全局</div>
+        <div class="c5"><span class="status ok">已發布</span></div>
+      </a>
+
+      <a class="row item" href="/HKR/press">
+        <div class="c1"><time datetime="2043-07-01">2043-07-01</time></div>
+        <div class="c2">
+          <span class="code">ST-2043-0701</span>
+          <span class="kind">官方聲明</span>
+        </div>
+        <div class="c3">
+          關於共和國制度運作之正式聲明
+          <div class="excerpt">宣布憲政治理開始運作，公共機構依法履行職權，確保公共服務連續性。</div>
+        </div>
+        <div class="c4">行政總理辦公室</div>
+        <div class="c5"><span class="status ok">已發布</span></div>
+      </a>
+    </div>
 
     <div class="footnote">
-      提示：下一步可接入內容系統，將每則公告獨立成一篇文件並提供永久連結與可檢索索引。
+      下一步可建立每則公告的獨立頁面（永久連結），並加入檢索（按編號、日期、機關、類別）。
     </div>
   </section>
 
@@ -117,155 +105,135 @@ const pageDescription =
     .lead {
       color: #444;
       font-size: 1.05rem;
-      max-width: 58rem;
+      max-width: 60rem;
     }
 
-    .tools {
-      margin-top: 1.5rem;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 1rem;
-    }
-
-    .tool-card {
+    .notice {
+      margin-top: 1.35rem;
       border: 1px solid #e7e7e7;
       border-radius: 16px;
-      background: #fafafa;
-      padding: 1rem;
+      padding: 0.9rem 1rem;
+      background: #fff;
+      display: flex;
+      gap: 0.9rem;
+      align-items: center;
     }
 
-    .tool-title {
-      font-weight: 800;
-      margin-bottom: 0.5rem;
+    .notice-badge {
+      background: #111;
+      color: #fff;
+      font-size: 0.82rem;
+      padding: 0.25rem 0.6rem;
+      border-radius: 999px;
+      white-space: nowrap;
     }
 
-    .tool-card ul {
-      margin: 0.4rem 0 0;
-      padding-left: 1.2rem;
-      color: #333;
-    }
-
-    .tool-card li {
-      margin: 0.4rem 0;
+    .notice-text {
       color: #444;
     }
 
-    .chips {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.5rem;
-      margin-top: 0.35rem;
-    }
-
-    .chip {
-      display: inline-flex;
-      align-items: center;
-      padding: 0.22rem 0.55rem;
-      border-radius: 999px;
-      border: 1px solid #e7e7e7;
-      background: #fff;
-      color: #333;
-      font-weight: 650;
-      font-size: 0.88rem;
-    }
-
-    .list {
-      margin-top: 2rem;
+    .board {
+      margin-top: 1.6rem;
       border: 1px solid #e7e7e7;
       border-radius: 18px;
       background: #fff;
       overflow: hidden;
     }
 
-    .list-head {
+    .board-head {
       display: flex;
       justify-content: space-between;
       align-items: baseline;
       gap: 1rem;
-      padding: 1rem 1rem 0.75rem;
-      border-bottom: 1px solid #eeeeee;
+      padding: 1rem 1rem 0.85rem;
       background: #fafafa;
+      border-bottom: 1px solid #eeeeee;
+      flex-wrap: wrap;
     }
 
-    .list-head h2 {
+    .board-head h2 {
       margin: 0;
       font-size: 1.25rem;
     }
 
-    .list-meta {
+    .meta {
       color: #666;
       font-size: 0.92rem;
       white-space: nowrap;
     }
 
-    .item {
+    .table {
+      display: block;
+    }
+
+    .row {
       display: grid;
-      grid-template-columns: 170px 1fr 110px;
-      gap: 1rem;
-      padding: 1rem;
+      grid-template-columns: 140px 190px 1fr 160px 120px;
+      gap: 0.8rem;
+      padding: 0.9rem 1rem;
       border-bottom: 1px solid #eeeeee;
       align-items: start;
     }
 
-    .item:last-of-type {
-      border-bottom: none;
+    .headrow {
+      background: #fafafa;
+      font-weight: 900;
+      color: #333;
+      font-size: 0.92rem;
+      align-items: center;
     }
 
-    .item-left {
-      display: grid;
-      gap: 0.35rem;
-    }
-
-    .date {
-      font-weight: 800;
+    .item {
+      text-decoration: none;
       color: #111;
-      font-size: 0.95rem;
     }
 
-    .type {
+    .item:hover {
+      background: #fff;
+      box-shadow: inset 0 0 0 1px #b80000;
+    }
+
+    .code {
+      display: block;
+      font-weight: 900;
+      color: #111;
+      font-size: 0.92rem;
+    }
+
+    .kind {
       display: inline-flex;
-      width: fit-content;
-      padding: 0.18rem 0.5rem;
+      margin-top: 0.25rem;
+      padding: 0.14rem 0.5rem;
       border-radius: 999px;
       border: 1px solid #e7e7e7;
       background: #fafafa;
       color: #333;
-      font-weight: 700;
-      font-size: 0.85rem;
-    }
-
-    .title {
-      margin: 0;
-      font-size: 1.05rem;
-      letter-spacing: 0.2px;
+      font-weight: 800;
+      font-size: 0.82rem;
+      width: fit-content;
     }
 
     .excerpt {
-      margin: 0.35rem 0 0;
-      color: #444;
+      margin-top: 0.35rem;
+      color: #555;
+      font-size: 0.95rem;
     }
 
-    .item-right {
-      display: flex;
-      justify-content: flex-end;
-    }
-
-    .btn {
+    .status {
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      padding: 0.55rem 0.8rem;
-      border-radius: 12px;
-      text-decoration: none;
-      font-weight: 800;
+      padding: 0.18rem 0.55rem;
+      border-radius: 999px;
       border: 1px solid #e7e7e7;
-      background: #fff;
-      color: #b80000;
+      background: #fafafa;
+      font-weight: 900;
+      font-size: 0.86rem;
       white-space: nowrap;
     }
 
-    .btn:hover {
-      background: #f3f3f3;
+    .status.ok {
+      color: #111;
     }
 
     .footnote {
@@ -276,15 +244,9 @@ const pageDescription =
       font-size: 0.92rem;
     }
 
-    @media (max-width: 980px) {
-      .tools {
+    @media (max-width: 1080px) {
+      .row {
         grid-template-columns: 1fr;
-      }
-      .item {
-        grid-template-columns: 1fr;
-      }
-      .item-right {
-        justify-content: flex-start;
       }
     }
   </style>
