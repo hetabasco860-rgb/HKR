@@ -1,95 +1,240 @@
 ---
 import BaseLayout from "@layouts/BaseLayout.astro";
 
-const pageTitle = "Government Structure | Hong-Kong Republic";
+const pageTitle = "政府｜香港共和國";
 const pageDescription =
-  "Structure, institutions, and constitutional offices of the Government of the Hong-Kong Republic.";
+  "香港共和國政府架構：國家元首、行政、立法、司法與獨立機構。";
 ---
 
 <BaseLayout title={pageTitle} description={pageDescription}>
-  <section>
-    <h1>Government of the Hong-Kong Republic</h1>
+  <section class="head">
+    <div class="badge">政府架構</div>
+    <h1>政府</h1>
     <p class="lead">
-      The Government of the Hong-Kong Republic is established under a
-      constitutional framework that ensures the separation of powers,
-      institutional accountability, and continuity of governance.
+      香港共和國政府依憲政框架運作，確保權力分立、機關問責與公共服務之持續性。
+      本頁概述主要憲制機關與獨立公共機構。
     </p>
   </section>
 
-  <section>
-    <h2>Head of State</h2>
-    <p>
-      The President of the Hong-Kong Republic serves as the Head of State and is
-      responsible for representing the Republic in external affairs, appointing
-      senior officials in accordance with law, and safeguarding constitutional
-      order.
-    </p>
+  <section class="overview">
+    <div class="card">
+      <h2>國家元首</h2>
+      <p>
+        總統為國家元首，代表共和國對外行使國家禮儀與憲制職能，並依法律任命高級官員，
+        維護憲制秩序與國家安全。
+      </p>
+    </div>
+
+    <div class="card">
+      <h2>行政權</h2>
+      <p>
+        行政權由政府行使，行政總理由法律授權負責統籌政策執行、公共行政、國家安全與經濟治理。
+        各政策局與公共機構依法履行職權。
+      </p>
+    </div>
+
+    <div class="card">
+      <h2>立法權</h2>
+      <p>
+        立法權由兩院制立法機關行使，包括「公民院」及「專業院」。立法機關負責制定法律、
+        審議預算、監督行政及確保制度透明。
+      </p>
+    </div>
+
+    <div class="card">
+      <h2>司法權</h2>
+      <p>
+        司法機關獨立行使審判權，保障法治與正當程序。法院對公共權力之行使具有司法審查權，
+        以確保所有公權力均受憲法與法律約束。
+      </p>
+    </div>
   </section>
 
-  <section>
-    <h2>Executive Authority</h2>
-    <p>
-      Executive power is exercised by the Government, led by the Administrative
-      Prime Minister. The Government is responsible for policy execution,
-      public administration, national security, and economic governance.
-    </p>
+  <section class="institutions">
+    <div class="section-head">
+      <h2>獨立公共機構</h2>
+      <div class="sub">依法設立，獨立履職，確保公共信任與制度穩定</div>
+    </div>
+
+    <div class="grid">
+      <div class="tile">
+        <div class="tile-title">金融安全局</div>
+        <div class="tile-desc">
+          負責金融穩定、系統性風險監測、市場完整性與關鍵結算基礎設施之安全保障。
+        </div>
+      </div>
+
+      <div class="tile">
+        <div class="tile-title">審計署</div>
+        <div class="tile-desc">
+          負責公共財政審計、支出合規性檢查與公共資源使用效率之評估。
+        </div>
+      </div>
+
+      <div class="tile">
+        <div class="tile-title">選舉委員會</div>
+        <div class="tile-desc">
+          負責選舉制度之執行、選民登記、投票安排及選舉程序之公正與透明。
+        </div>
+      </div>
+
+      <div class="tile">
+        <div class="tile-title">公共廉政委員會</div>
+        <div class="tile-desc">
+          負責防貪監督、利益申報與公共誠信制度之維護，確保政府行為可追溯與可監督。
+        </div>
+      </div>
+    </div>
   </section>
 
-  <section>
-    <h2>Legislative Authority</h2>
-    <p>
-      Legislative power is vested in a bicameral legislature composed of the
-      Civic Assembly and the Professional Council. Together, they enact laws,
-      approve budgets, and provide institutional oversight.
-    </p>
+  <section class="links">
+    <div class="link-card">
+      <h2>相關查閱</h2>
+      <ul>
+        <li><a href="/HKR/laws">憲政框架與核心法規</a></li>
+        <li><a href="/HKR/press">官方公告與新聞稿</a></li>
+        <li><a href="/HKR/timeline">國史年表與官方紀錄</a></li>
+      </ul>
+    </div>
+
+    <div class="link-card">
+      <h2>提示</h2>
+      <p class="note">
+        本頁為政府架構之概述版本。各機關之詳細職權、程序及授權範圍，以正式法律文本與公告為準。
+      </p>
+    </div>
   </section>
 
-  <section>
-    <h2>Judicial Authority</h2>
-    <p>
-      Judicial power is exercised independently by the courts of the Hong-Kong
-      Republic. The judiciary safeguards the rule of law and ensures that all
-      public authorities act within constitutional and legal limits.
-    </p>
-  </section>
+  <style>
+    .head {
+      padding-top: 0.25rem;
+    }
 
-  <section>
-    <h2>Independent Institutions</h2>
-    <ul>
-      <li>Financial Security Authority</li>
-      <li>National Audit Office</li>
-      <li>Electoral Commission</li>
-      <li>Commission on Public Integrity</li>
-    </ul>
-  </section>
+    .badge {
+      display: inline-block;
+      font-size: 0.85rem;
+      letter-spacing: 0.8px;
+      color: #fff;
+      background: #b80000;
+      padding: 0.25rem 0.55rem;
+      border-radius: 999px;
+      margin-bottom: 0.75rem;
+    }
+
+    .lead {
+      color: #444;
+      font-size: 1.05rem;
+      max-width: 60rem;
+    }
+
+    .overview {
+      margin-top: 1.6rem;
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1rem;
+    }
+
+    .card {
+      border: 1px solid #e7e7e7;
+      border-radius: 16px;
+      padding: 1rem;
+      background: #fff;
+    }
+
+    .card h2 {
+      margin: 0 0 0.5rem 0;
+      font-size: 1.2rem;
+    }
+
+    .card p {
+      margin: 0.35rem 0 0;
+      color: #333;
+    }
+
+    .institutions {
+      margin-top: 2.2rem;
+    }
+
+    .section-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .sub {
+      color: #666;
+      font-size: 0.92rem;
+    }
+
+    .grid {
+      margin-top: 0.9rem;
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1rem;
+    }
+
+    .tile {
+      border: 1px solid #e7e7e7;
+      border-radius: 16px;
+      background: #fafafa;
+      padding: 1rem;
+    }
+
+    .tile-title {
+      font-weight: 850;
+      margin-bottom: 0.35rem;
+    }
+
+    .tile-desc {
+      color: #444;
+      font-size: 0.98rem;
+    }
+
+    .links {
+      margin-top: 2.2rem;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+
+    .link-card {
+      border: 1px solid #e7e7e7;
+      border-radius: 16px;
+      padding: 1rem;
+      background: #fff;
+    }
+
+    .link-card h2 {
+      margin: 0 0 0.5rem 0;
+      font-size: 1.2rem;
+    }
+
+    .link-card ul {
+      margin: 0.4rem 0 0;
+      padding-left: 1.2rem;
+    }
+
+    .link-card li {
+      margin: 0.45rem 0;
+    }
+
+    .note {
+      margin: 0.25rem 0 0;
+      color: #444;
+    }
+
+    @media (max-width: 980px) {
+      .overview {
+        grid-template-columns: 1fr;
+      }
+      .grid {
+        grid-template-columns: 1fr;
+      }
+      .links {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
 </BaseLayout>
-
-<style>
-  .lead {
-    font-size: 1.1rem;
-    color: #444;
-    max-width: 800px;
-  }
-
-  section {
-    margin-top: 2.75rem;
-  }
-
-  h1 {
-    font-size: 2.2rem;
-    margin-bottom: 0.75rem;
-  }
-
-  h2 {
-    font-size: 1.35rem;
-    margin-bottom: 0.5rem;
-  }
-
-  ul {
-    padding-left: 1.2rem;
-  }
-
-  li {
-    margin-bottom: 0.4rem;
-  }
-</style>
