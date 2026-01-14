@@ -30,7 +30,7 @@ const pageDescription = "香港共和國政府官方門戶：公告、政府資�
           <div class="meta-value">官方公開發布</div>
         </div>
         <div class="meta-item">
-          <div class="meta-label">更新頻率</div>
+          <div class="meta-label">更新機制</div>
           <div class="meta-value">按需發布</div>
         </div>
       </div>
@@ -81,34 +81,68 @@ const pageDescription = "香港共和國政府官方門戶：公告、政府資�
     </div>
   </section>
 
-  <!-- Latest / Highlights -->
+  <!-- Latest / Public -->
   <section class="two-col">
     <div class="col">
-      <h2>最新發布</h2>
+      <div class="section-head">
+        <h2>最新發布</h2>
+        <a class="headlink" href="/HKR/press">全部公告 →</a>
+      </div>
 
-      <article class="card">
-        <div class="card-top">
-          <span class="tag">公告</span>
-          <time datetime="2043-07-15">2043-07-15</time>
+      <div class="bulletin">
+        <div class="b-row b-head">
+          <div class="c1">日期</div>
+          <div class="c2">編號 / 類別</div>
+          <div class="c3">標題</div>
+          <div class="c4">發布機關</div>
+          <div class="c5">狀態</div>
         </div>
-        <h3>金融連續性與市場運作安排通告</h3>
-        <p>
-          本通告概述市場結算、合約連續性及金融系統運作之安排，並列明相關執行機構。
-        </p>
-        <a class="more" href="/HKR/press">前往公告中心 →</a>
-      </article>
 
-      <article class="card">
-        <div class="card-top">
-          <span class="tag">聲明</span>
-          <time datetime="2043-07-01">2043-07-01</time>
-        </div>
-        <h3>關於共和國制度運作之正式聲明</h3>
-        <p>
-          政府宣布憲政治理開始運作，公共機構依法履行職權，確保公共服務之持續性。
-        </p>
-        <a class="more" href="/HKR/press">查看更多 →</a>
-      </article>
+        <a class="b-row b-item" href="/HKR/press">
+          <div class="c1">
+            <time datetime="2043-07-15">2043-07-15</time>
+          </div>
+          <div class="c2">
+            <span class="code">PR-2043-0715</span>
+            <span class="kind">政策通告</span>
+          </div>
+          <div class="c3">
+            金融連續性與市場運作安排通告
+          </div>
+          <div class="c4">金融安全局</div>
+          <div class="c5"><span class="status ok">已發布</span></div>
+        </a>
+
+        <a class="b-row b-item" href="/HKR/press">
+          <div class="c1">
+            <time datetime="2043-07-01">2043-07-01</time>
+          </div>
+          <div class="c2">
+            <span class="code">ST-2043-0701</span>
+            <span class="kind">官方聲明</span>
+          </div>
+          <div class="c3">
+            關於共和國制度運作之正式聲明
+          </div>
+          <div class="c4">行政總理辦公室</div>
+          <div class="c5"><span class="status ok">已發布</span></div>
+        </a>
+
+        <a class="b-row b-item" href="/HKR/press">
+          <div class="c1">
+            <time datetime="2043-08-03">2043-08-03</time>
+          </div>
+          <div class="c2">
+            <span class="code">PR-2043-0803</span>
+            <span class="kind">新聞稿</span>
+          </div>
+          <div class="c3">
+            司法行政架構調整與法院運作安排
+          </div>
+          <div class="c4">司法行政署</div>
+          <div class="c5"><span class="status ok">已發布</span></div>
+        </a>
+      </div>
     </div>
 
     <div class="col">
@@ -126,19 +160,23 @@ const pageDescription = "香港共和國政府官方門戶：公告、政府資�
 
       <div class="info card">
         <h3>網站狀態</h3>
-        <div class="status">
-          <div class="status-row">
-            <span class="k">部署</span>
+        <div class="statusbox">
+          <div class="srow">
+            <span class="k">發布平台</span>
             <span class="v">GitHub Pages</span>
           </div>
-          <div class="status-row">
-            <span class="k">版本</span>
-            <span class="v">v1.0</span>
+          <div class="srow">
+            <span class="k">內容性質</span>
+            <span class="v">官方公開發布</span>
           </div>
-          <div class="status-row">
-            <span class="k">最後更新</span>
-            <span class="v">按提交自動更新</span>
+          <div class="srow">
+            <span class="k">更新方式</span>
+            <span class="v">自動部署</span>
           </div>
+        </div>
+
+        <div class="mini-note">
+          如遇顯示異常，請嘗試重新整理或清除瀏覽器快取後再試。
         </div>
       </div>
     </div>
@@ -150,7 +188,7 @@ const pageDescription = "香港共和國政府官方門戶：公告、政府資�
       <div>
         <h2>查閱政府公告</h2>
         <p class="muted">
-          公告中心收錄政策發布、官方聲明及新聞稿，並提供可追溯之發布日期。
+          公告中心收錄政策發布、官方聲明及新聞稿，並提供可追溯之發布日期與公告編號。
         </p>
       </div>
       <a class="btn primary" href="/HKR/press">進入公告中心</a>
@@ -332,8 +370,98 @@ const pageDescription = "香港共和國政府官方門戶：公告、政府資�
     .two-col {
       margin-top: 2.2rem;
       display: grid;
-      grid-template-columns: 1fr 0.85fr;
+      grid-template-columns: 1fr 0.9fr;
       gap: 1.5rem;
+    }
+
+    .section-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .headlink {
+      text-decoration: none;
+      font-weight: 850;
+      color: #b80000;
+      white-space: nowrap;
+    }
+
+    .headlink:hover {
+      text-decoration: underline;
+    }
+
+    .bulletin {
+      margin-top: 0.9rem;
+      border: 1px solid #e7e7e7;
+      border-radius: 18px;
+      overflow: hidden;
+      background: #fff;
+    }
+
+    .b-row {
+      display: grid;
+      grid-template-columns: 140px 190px 1fr 160px 120px;
+      gap: 0.8rem;
+      padding: 0.85rem 1rem;
+      align-items: center;
+      border-bottom: 1px solid #eeeeee;
+    }
+
+    .b-head {
+      background: #fafafa;
+      font-weight: 900;
+      color: #333;
+      font-size: 0.92rem;
+    }
+
+    .b-item {
+      text-decoration: none;
+      color: #111;
+    }
+
+    .b-item:hover {
+      background: #fff;
+      box-shadow: inset 0 0 0 1px #b80000;
+    }
+
+    .code {
+      display: block;
+      font-weight: 900;
+      color: #111;
+      font-size: 0.92rem;
+    }
+
+    .kind {
+      display: inline-flex;
+      margin-top: 0.25rem;
+      padding: 0.14rem 0.5rem;
+      border-radius: 999px;
+      border: 1px solid #e7e7e7;
+      background: #fafafa;
+      color: #333;
+      font-weight: 800;
+      font-size: 0.82rem;
+      width: fit-content;
+    }
+
+    .status {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.18rem 0.55rem;
+      border-radius: 999px;
+      border: 1px solid #e7e7e7;
+      background: #fafafa;
+      font-weight: 900;
+      font-size: 0.86rem;
+      white-space: nowrap;
+    }
+
+    .status.ok {
+      color: #111;
     }
 
     .card {
@@ -342,45 +470,6 @@ const pageDescription = "香港共和國政府官方門戶：公告、政府資�
       padding: 1rem;
       background: #fff;
       margin-top: 0.9rem;
-    }
-
-    .card-top {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 1rem;
-      color: #666;
-      font-size: 0.9rem;
-    }
-
-    .tag {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.35rem;
-      padding: 0.18rem 0.55rem;
-      border-radius: 999px;
-      border: 1px solid #e7e7e7;
-      color: #333;
-      background: #fafafa;
-      font-weight: 650;
-      font-size: 0.85rem;
-    }
-
-    h3 {
-      margin: 0.55rem 0 0.25rem;
-      font-size: 1.05rem;
-    }
-
-    .more {
-      display: inline-block;
-      margin-top: 0.55rem;
-      text-decoration: none;
-      font-weight: 700;
-      color: #b80000;
-    }
-
-    .more:hover {
-      text-decoration: underline;
     }
 
     .list {
@@ -393,30 +482,36 @@ const pageDescription = "香港共和國政府官方門戶：公告、政府資�
       margin: 0.45rem 0;
     }
 
-    .status {
-      margin-top: 0.5rem;
+    .statusbox {
+      margin-top: 0.55rem;
       display: grid;
       gap: 0.45rem;
     }
 
-    .status-row {
+    .srow {
       display: flex;
       justify-content: space-between;
       gap: 1rem;
-      padding: 0.5rem 0.6rem;
+      padding: 0.55rem 0.7rem;
       border-radius: 12px;
       background: #fafafa;
       border: 1px solid #eeeeee;
     }
 
-    .status-row .k {
+    .srow .k {
       color: #666;
     }
 
-    .status-row .v {
-      font-weight: 750;
+    .srow .v {
+      font-weight: 900;
       color: #111;
       white-space: nowrap;
+    }
+
+    .mini-note {
+      margin-top: 0.75rem;
+      color: #666;
+      font-size: 0.92rem;
     }
 
     .bottom {
@@ -441,7 +536,7 @@ const pageDescription = "香港共和國政府官方門戶：公告、政府資�
       max-width: 46rem;
     }
 
-    @media (max-width: 980px) {
+    @media (max-width: 1080px) {
       .hero {
         grid-template-columns: 1fr;
       }
@@ -450,6 +545,10 @@ const pageDescription = "香港共和國政府官方門戶：公告、政府資�
       }
       .meta {
         grid-template-columns: 1fr;
+      }
+      .b-row {
+        grid-template-columns: 1fr;
+        align-items: start;
       }
     }
   </style>
