@@ -38,7 +38,7 @@ const pageDescription =
         <div class="c5">狀態</div>
       </div>
 
-      <!-- ✅ 這一條現在真正連到單篇公告 -->
+      <!-- ✅ PR-2043-0715：已連到單篇 -->
       <a class="row item" href="/HKR/press/pr-2043-0715">
         <div class="c1"><time datetime="2043-07-15">2043-07-15</time></div>
         <div class="c2">
@@ -53,7 +53,8 @@ const pageDescription =
         <div class="c5"><span class="status ok">已發布</span></div>
       </a>
 
-      <a class="row item" href="/HKR/press">
+      <!-- ✅ PR-2043-0803：本步驟改成連到單篇 -->
+      <a class="row item" href="/HKR/press/pr-2043-0803">
         <div class="c1"><time datetime="2043-08-03">2043-08-03</time></div>
         <div class="c2">
           <span class="code">PR-2043-0803</span>
@@ -67,6 +68,7 @@ const pageDescription =
         <div class="c5"><span class="status ok">已發布</span></div>
       </a>
 
+      <!--（尚未建立單篇，先暫留列表頁）-->
       <a class="row item" href="/HKR/press">
         <div class="c1"><time datetime="2043-07-01">2043-07-01</time></div>
         <div class="c2">
@@ -83,7 +85,7 @@ const pageDescription =
     </div>
 
     <div class="footnote">
-      下一步可逐一建立其餘公告之獨立頁面，並補齊永久連結與引用格式。
+      下一步可建立 ST-2043-0701 的獨立頁面，並補齊永久連結與引用格式。
     </div>
   </section>
 
@@ -155,17 +157,10 @@ const pageDescription =
       font-size: 0.92rem;
     }
 
-    .item {
-      text-decoration: none;
-      color: #111;
-    }
+    .item { text-decoration: none; color: #111; }
+    .item:hover { background: #fff; box-shadow: inset 0 0 0 1px #b80000; }
 
-    .item:hover {
-      background: #fff;
-      box-shadow: inset 0 0 0 1px #b80000;
-    }
-
-    .code { font-weight: 900; }
+    .code { display: block; font-weight: 900; color: #111; font-size: 0.92rem; }
     .kind {
       display: inline-flex;
       margin-top: 0.25rem;
@@ -173,19 +168,25 @@ const pageDescription =
       border-radius: 999px;
       border: 1px solid #e7e7e7;
       background: #fafafa;
+      color: #333;
       font-weight: 800;
       font-size: 0.82rem;
+      width: fit-content;
     }
 
-    .excerpt { margin-top: 0.35rem; color: #555; }
+    .excerpt { margin-top: 0.35rem; color: #555; font-size: 0.95rem; }
+
     .status {
       display: inline-flex;
+      align-items: center;
+      justify-content: center;
       padding: 0.18rem 0.55rem;
       border-radius: 999px;
       border: 1px solid #e7e7e7;
       background: #fafafa;
       font-weight: 900;
       font-size: 0.86rem;
+      white-space: nowrap;
     }
 
     .footnote {
