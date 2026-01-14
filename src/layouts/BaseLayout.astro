@@ -1,7 +1,7 @@
 ---
 const {
   title = "Hong-Kong Republic",
-  description = "Official website of the Hong-Kong Republic Government",
+  description = "Official website of the Government of the Hong-Kong Republic",
 } = Astro.props;
 ---
 
@@ -26,6 +26,7 @@ const {
   </head>
 
   <body>
+    <!-- Header -->
     <header class="site-header">
       <div class="header-inner">
         <div class="brand">
@@ -43,41 +44,35 @@ const {
       </div>
     </header>
 
+    <!-- Main -->
     <main class="site-main">
       <slot />
     </main>
 
-<footer class="site-footer">
-  <div class="footer-inner">
-    <div class="footer-brand">
-      <img
-        src="/HKR/assets/emblem.svg"
-        alt="National Emblem of the Hong-Kong Republic"
-        class="footer-emblem"
-        loading="lazy"
-      />
-      <div class="footer-text">
-        <p class="footer-title">Government of the Hong-Kong Republic</p>
-        <p class="footer-sub">
-          Official Public Communications Portal
-        </p>
-      </div>
-    </div>
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <img
+            src="/HKR/assets/emblem.svg"
+            alt="National Emblem of the Hong-Kong Republic"
+            class="footer-emblem"
+            loading="lazy"
+          />
+          <div class="footer-text">
+            <p class="footer-title">Government of the Hong-Kong Republic</p>
+            <p class="footer-sub">
+              Official Public Communications Portal
+            </p>
+          </div>
+        </div>
 
-    <div class="footer-meta">
-      <p>© 2043–Present Government of the Hong-Kong Republic</p>
-      <p class="footer-note">
-        Materials published on this website constitute official public communications.
-      </p>
-    </div>
-  </div>
-</footer>
-
-          © 2043–Present Government of the Hong-Kong Republic
-        </p>
-        <p class="footer-note">
-          This website is an official publication of the Hong-Kong Republic.
-        </p>
+        <div class="footer-meta">
+          <p>© 2043–Present Government of the Hong-Kong Republic</p>
+          <p class="footer-note">
+            Materials published on this website constitute official public communications.
+          </p>
+        </div>
       </div>
     </footer>
   </body>
@@ -101,6 +96,7 @@ const {
     line-height: 1.6;
   }
 
+  /* Header */
   .site-header {
     border-bottom: 1px solid var(--border);
     background: #fff;
@@ -131,12 +127,14 @@ const {
     color: var(--primary);
   }
 
+  /* Main */
   .site-main {
     max-width: 1200px;
     margin: 0 auto;
     padding: 2.5rem 1.5rem;
   }
 
+  /* Footer */
   .site-footer {
     border-top: 1px solid var(--border);
     margin-top: 4rem;
@@ -149,6 +147,34 @@ const {
     padding: 1.5rem;
     font-size: 0.85rem;
     color: var(--muted);
+  }
+
+  .footer-brand {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+
+  .footer-emblem {
+    width: 56px;
+    height: 56px;
+    display: block;
+  }
+
+  .footer-title {
+    margin: 0;
+    font-weight: 600;
+    color: #333;
+  }
+
+  .footer-sub {
+    margin: 0.15rem 0 0 0;
+    color: #666;
+  }
+
+  .footer-meta p {
+    margin: 0.25rem 0;
   }
 
   .footer-note {
