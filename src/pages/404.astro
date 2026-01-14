@@ -1,0 +1,76 @@
+---
+import BaseLayout from "@layouts/BaseLayout.astro";
+
+const pageTitle = "Page Not Found (404) | Hong-Kong Republic";
+const pageDescription =
+  "The requested page could not be found on the official website of the Hong-Kong Republic.";
+---
+
+<BaseLayout title={pageTitle} description={pageDescription}>
+  <section class="wrap">
+    <h1>404 — Page Not Found</h1>
+    <p class="lead">
+      The requested resource is not available at this address.
+    </p>
+
+    <div class="box">
+      <p class="hint">
+        Please verify the URL, or use the official navigation below.
+      </p>
+
+      <nav class="links" aria-label="Primary navigation links">
+        <a href="/HKR/">Home</a>
+        <a href="/HKR/government">Government</a>
+        <a href="/HKR/laws">Laws</a>
+        <a href="/HKR/timeline">Timeline</a>
+        <a href="/HKR/press">Press</a>
+        <a href="/HKR/symbols">National Symbols</a>
+      </nav>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .wrap {
+    max-width: 820px;
+  }
+
+  h1 {
+    font-size: 2.2rem;
+    margin: 0 0 0.75rem 0;
+  }
+
+  .lead {
+    font-size: 1.1rem;
+    color: #444;
+    margin: 0 0 1.5rem 0;
+  }
+
+  .box {
+    border: 1px solid #e5e5e5;
+    border-radius: 12px;
+    padding: 1.25rem;
+    background: #fafafa;
+  }
+
+  .hint {
+    margin: 0 0 1rem 0;
+    color: #555;
+  }
+
+  .links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem 1rem;
+  }
+
+  .links a {
+    color: #b80000;
+    text-decoration: none;
+    font-weight: 550;
+  }
+
+  .links a:hover {
+    text-decoration: underline;
+  }
+</style>
